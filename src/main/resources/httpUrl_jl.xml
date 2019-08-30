@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="BankHttpUrl" class="com.asiainfo.banksocket.common.BankHttpUrl" >
+            <property name="queryBalanceUrl"
+                      value="http://136.160.153.42:8026/billsrv/openApi/QueryBalance">
+            </property>
+            <property name="rechargeBalanceUrl"
+                      value="http://136.160.153.42:8026/billsrv/openApi/RechargeBalance">
+            </property>
+            <property name="rollRechargeBalanceUrl"
+                      value="http://136.160.153.42:8026/billsrv/openApi/RollRechargeBalance">
+            </property>
+        </bean>
+</beans>

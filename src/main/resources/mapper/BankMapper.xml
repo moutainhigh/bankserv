@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.asiainfo.banksocket.mapper.BankMapper">
+    <select id="queryProdInstId" resultType="java.lang.String">
+        select a.PROD_INST_ID from account a where a.ACCT_ID = #{obj} and a.ROUTE_ID = #{obj}
+    </select>
+    <select id="queryProdInstInfo" resultType="java.util.HashMap">
+        select a.ACC_NUM,a.PROD_ID from prod_inst a where a.PROD_INST_ID = #{prodInstId}
+        and a.ROUTE_ID = #{objValue}
+    </select>
+    <select id="checkRowNum" resultType="java.lang.String">
+        <![CDATA[
+        select count(1) from BANK_CHARGE_RECORD t where t.other_payment_id=#{flowId}
+        and t.so_region_code=#{areaId} and t.created_datetime>=DATE_FORMAT(NOW(),'%Y%m%d')
+        and t.busi_code='4103' and t.bankid=#{bankId}
+        ]]>
+    </select>
+    <insert id="insertBankChargeRecord" parameterType="com.asiainfo.banksocket.common.BankChargeRecord">
+        INSERT INTO bank_charge_record(payment_id,other_payment_id,created_datetime,payment_datetime,amount,state,so_region_code,bankid,busi_code,staff_id)
+        VALUES(#{bankChargeRecord.payment_id},#{bankChargeRecord.other_payment_id},#{bankChargeRecord.created_date},#{bankChargeRecord.payment_date},#{bankChargeRecord.amount},#{bankChargeRecord.state},
+        #{bankChargeRecord.so_region_code},#{bankChargeRecord.bankid},#{bankChargeRecord.busi_code},#{bankChargeRecord.staff_id})
+    </insert>
+    <update id="updateBankChargeRecord"  parameterType="com.asiainfo.banksocket.common.BankChargeRecord">
+        UPDATE bank_charge_record SET unpay_other_payment_id = #{bankChargeRecord.unpay_other_payment_id} ,
+        unpay_payment_id = #{bankChargeRecord.unpay_payment_id},state = -1
+        WHERE payment_id = #{bankChargeRecord.payment_id}
+    </update>
+</mapper>
