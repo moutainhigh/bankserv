@@ -1,7 +1,9 @@
 package com.asiainfo.banksocket.service;
 
 import com.asiainfo.banksocket.common.PacketHead;
+import org.apache.http.client.ClientProtocolException;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public interface IBankService {
@@ -33,17 +35,17 @@ public interface IBankService {
      * 缴费查询（余额查询）
      *
      * */
-    String queryBalance(String packetHead, String request);
+    String queryBalance(String packetHead, String request) throws IOException;
 
     /**
      * 销账(余额充值)
      *
      * */
-    String rechargeBalance(String packetHead, String request);
+    String rechargeBalance(String packetHead, String request) throws IOException;
 
     /**
      * 反销（余额充值回退[非充值卡]）
      *
      * */
-    String rollRechargeBalance(String packetHead, String request);
+    String rollRechargeBalance(String packetHead, String request) throws ClientProtocolException, IOException;
 }

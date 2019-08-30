@@ -8,6 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import org.apache.http.client.ClientProtocolException;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -44,7 +46,7 @@ public class BankServerHandler extends ChannelInboundHandlerAdapter{
      *   fire*方法传递给ChannelPipeline中的下一个ChannelHandler,如果想要传递给下一个ChannelHandler需要调用ReferenceCountUtil#retain方法。
      */
     @Override
-    public void channelRead(ChannelHandlerContext ctx,Object message){
+    public void channelRead(ChannelHandlerContext ctx,Object message) throws IOException {
         //System.out.println("ServerHandler receive msg:"+ message.toString());
         //写消息:先得到channel，再写入通道，然后flush刷新通道把消息发出去
         //ctx.channel().writeAndFlush("this is ServerHandler repyl message happend at" + System.currentTimeMillis());
@@ -75,7 +77,7 @@ public class BankServerHandler extends ChannelInboundHandlerAdapter{
                     break;
                 case "160":
                     //交易码160，反销（余额充值回退[非充值卡]）
-                    result=bankServerHandler.bankService.rollRechargeBalance(head,request);
+                        result=bankServerHandler.bankService.rollRechargeBalance(head,request);
                     break;
                 default:
                     break;
