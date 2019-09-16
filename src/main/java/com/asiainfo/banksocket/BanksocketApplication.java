@@ -8,12 +8,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-
+import org.springframework.context.annotation.ImportResource;
 
 
 @SpringBootApplication
 @MapperScan(basePackages = {"com.asiainfo.banksocket.mapper"})
 @ComponentScan(basePackages = {"com.asiainfo.banksocket.*"})
+@ImportResource(locations="httpUrl_jl.xml")
 public class BanksocketApplication implements CommandLineRunner {
 
     StartSocketServer startSocketServer=new StartSocketServer();

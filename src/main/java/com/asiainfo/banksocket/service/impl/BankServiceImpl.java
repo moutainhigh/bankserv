@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.asiainfo.banksocket.common.BankChargeRecord;
 import com.asiainfo.banksocket.common.BankHttpUrl;
 import com.asiainfo.banksocket.common.utils.HttpUtil;
+import com.asiainfo.banksocket.common.utils.HttpUtil.HttpResult;
 import com.asiainfo.banksocket.dao.BankDao;
 import com.asiainfo.banksocket.service.IBankService;
 import org.apache.http.HttpStatus;
@@ -17,14 +18,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
-import com.asiainfo.banksocket.common.utils.HttpUtil;
-import com.asiainfo.banksocket.common.utils.HttpUtil.HttpResult;
-import org.apache.http.client.ClientProtocolException;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 
 
@@ -96,7 +98,6 @@ public class BankServiceImpl implements IBankService {
             ApplicationContext ac = new ClassPathXmlApplicationContext("httpUrl_jl.xml");
             Map<String, String> object = new HashMap<String, String>();
             object.put("appID", "1111111");
-
             bankHttpUrl = (BankHttpUrl) ac.getBean("BankHttpUrl");
             HttpResult result2 = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
             JSONObject json = JSON.parseObject(result2.getData());
