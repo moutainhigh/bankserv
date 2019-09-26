@@ -73,7 +73,8 @@ public class BankServiceImpl implements IBankService {
             List<StdCcaQueryServListBean> StdCcaQueryServListBean=stdCcaQueryServResBean.getStdCcaQueryServList();
             String custName = StdCcaQueryServListBean.get(0).getCustName();
             String destinationAttr=StdCcaQueryServListBean.get(0).getDestinationAttr();
-
+           /* String custName = "王军";
+            String destinationAttr="2";*/
             //String content="CDMA  13324382737         20190812065724";
             HashMap<String, String> map = getBankInfo(packetHead);
             String bankHead = map.get("bankHead").toString();
@@ -117,15 +118,15 @@ public class BankServiceImpl implements IBankService {
                 Map<String, String> object = new HashMap<String, String>();
                 object.put("appID", "1111111");
 
-                HttpResult result2 = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
+                HttpResult balanceResult = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
 
 
-                System.out.println(result2.getCode());
-                if (result2.getCode() == HttpStatus.SC_OK) {
+                System.out.println(balanceResult.getCode());
+                if (balanceResult.getCode() == HttpStatus.SC_OK) {
                     object.clear();
-                    object.putAll(result2.getHeaders());
+                    object.putAll(balanceResult.getHeaders());
                     result += "1100  1";//交易码 +正确返回标识
-                    QueryBalanceRes queryBalance= JSON.parseObject(result2.getData(), QueryBalanceRes.class) ;
+                    QueryBalanceRes queryBalance= JSON.parseObject(balanceResult.getData(), QueryBalanceRes.class) ;
                     List<BalanceQuery> balanceQuery=queryBalance.getBalanceQuery();
                     BalanceQuery queryMap=balanceQuery.get(0);
                     Long acctId=queryMap.getAcctId();
@@ -193,16 +194,17 @@ public class BankServiceImpl implements IBankService {
                     operAttrStructMap.put("operPost",0);
                     operAttrStructMap.put("operServiceId","");
                     operAttrStructMap.put("lanId",0);
+                    String objValue=content.substring(12,27).replace(" ","");
 
                     HashMap<String,Object> svcObjectStructMap=new HashMap<String,Object>();//服务对象条件
                     svcObjectStructMap.put("objType","1");
-                    svcObjectStructMap.put("objValue",content.substring(12,27));
-                    svcObjectStructMap.put("objAttr","");
+                    svcObjectStructMap.put("objValue",objValue);
+                    svcObjectStructMap.put("objAttr","2");
                     svcObjectStructMap.put("dataArea","");
 
 
                     String flowId=content.substring(0,12);
-                    String rechargeSource="手机";
+                    String rechargeSource="100001";
                     String num=content.substring(27,39).replaceAll(" ","");
                     float scale = Float.valueOf(num);
                     DecimalFormat fnum = new DecimalFormat("##0.00");
@@ -227,12 +229,12 @@ public class BankServiceImpl implements IBankService {
                     Map<String,String> object=new HashMap<String, String>();
                     object.put("appID","1111111");
 
-                    HttpResult result2 = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
-                    JSONObject json =JSON.parseObject(result2.getData());
+                    HttpResult rechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
+                    JSONObject json =JSON.parseObject(rechargeResult.getData());
                     //状态码为请求成功
-                    if(result2.getCode() == HttpStatus.SC_OK){
+                    if(rechargeResult.getCode() == HttpStatus.SC_OK){
                         object.clear();
-                        object.putAll(result2.getHeaders());
+                        object.putAll(rechargeResult.getHeaders());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                         result += "1200  ";
                         String paymentId = "3769036028  #";//暂时写死，后面补充 （12位）  计费流水
@@ -327,12 +329,12 @@ public class BankServiceImpl implements IBankService {
                 Map<String, String> object = new HashMap<String, String>();
                 object.put("appID", "1111111");
 
-                HttpResult result2 = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
-                JSONObject json = JSON.parseObject(result2.getData());
+                HttpResult RollRechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
+                JSONObject json = JSON.parseObject(RollRechargeResult.getData());
                 //状态码为请求成功
-                if (result2.getCode() == HttpStatus.SC_OK) {
+                if (RollRechargeResult.getCode() == HttpStatus.SC_OK) {
                     object.clear();
-                    object.putAll(result2.getHeaders());
+                    object.putAll(RollRechargeResult.getHeaders());
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                     returnResult += "1600  ";
                     returnResult += "3769036028  #";//暂时写死，后面补充 （12位） 计费流水
@@ -381,53 +383,6 @@ public class BankServiceImpl implements IBankService {
             return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
         }
         return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
-        /*try {
-            URL url = new URL("http://136.160.161.100:8091/billing/acct/std/searchServInfo"); //url地址
-            //URL url = new URL("http://136.160.153.42:8026/billsrv/openApi/QueryBalance");
-
-
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.setDoOutput(true);
-            connection.setRequestMethod("POST");
-            connection.setUseCaches(false);
-            connection.setInstanceFollowRedirects(true);
-            connection.setRequestProperty("Content-Type","application/json");
-            connection.connect();
-
-            try (OutputStream os = connection.getOutputStream()) {
-                os.write(query.getBytes("UTF-8"));
-            }
-
-            try (BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(connection.getInputStream()))) {
-                String lines;
-                StringBuffer sbf = new StringBuffer();
-                while ((lines = reader.readLine()) != null) {
-                    lines = new String(lines.getBytes(), "utf-8");
-                    sbf.append(lines);
-                }
-                //log.info("返回来的报文："+sbf.toString());
-                result = sbf.toString();
-                System.out.println(result);
-
-            }
-            connection.disconnect();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        HashMap<String, Object> hashMap=JSON.parseObject(result, HashMap.class);
-        HashMap<String, Object> hashMap2=(HashMap<String, Object>)hashMap.get("stdCcaQueryServRes");
-        ArrayList<Map<String, Object>> list=(ArrayList) hashMap2.get("stdCcaQueryServList");
-        String custName=list.get(0).get("custName").toString();
-        //String telAcctName=list.get(0).get("telAcctName").toString();
-        HashMap<String, Object> map=new HashMap<String, Object>();
-        map.put("custName",custName);
-        //map.put("telAcctName",telAcctName);
-
-        return  map;*/
-
     }
 
     /**
