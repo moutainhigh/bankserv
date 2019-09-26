@@ -20,7 +20,8 @@ public class BankHttpUrl {
     public String rechargeBalanceUrl;
     @Value("${banksocket.rollRechargeBalanceUrl}")
     public String rollRechargeBalanceUrl;
-
+    @Value("${openApi.bon3.searchServInfo}")
+    public String searchServInfo;
 
     public String getQueryBalanceUrl() {
         return queryBalanceUrl;
@@ -44,5 +45,13 @@ public class BankHttpUrl {
 
     public void setRollRechargeBalanceUrl(String rollRechargeBalanceUrl) {
         this.rollRechargeBalanceUrl = rollRechargeBalanceUrl;
+    }
+
+    public String getSearchServInfo() {
+        return searchServInfo;
+    }
+
+    public void setSearchServInfo(String searchServInfo) {
+        this.searchServInfo = searchServInfo;
     }
 }
