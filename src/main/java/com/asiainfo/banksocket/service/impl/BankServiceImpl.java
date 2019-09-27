@@ -9,6 +9,7 @@ import com.asiainfo.banksocket.common.QueryBalanceRes;
 import com.asiainfo.banksocket.common.QueryBalanceRes.BalanceQuery;
 import com.asiainfo.banksocket.common.StdCcrQueryServRes;
 import com.asiainfo.banksocket.common.utils.HttpUtil;
+import com.asiainfo.banksocket.common.utils.LogUtil;
 import com.asiainfo.banksocket.dao.BankDao;
 import com.asiainfo.banksocket.service.IBankService;
 import org.apache.http.HttpStatus;
@@ -117,7 +118,8 @@ public class BankServiceImpl implements IBankService {
 
                 Map<String, String> object = new HashMap<String, String>();
                 object.put("appID", "1111111");
-
+                LogUtil.info("[开始调用远程服务 余额查询]"+ bankHttpUrl.getQueryBalanceUrl(),null, this.getClass());
+                LogUtil.info("输入参数[QueryBalanceReq]="+query,null, this.getClass());
                 HttpResult balanceResult = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
 
 
@@ -155,6 +157,7 @@ public class BankServiceImpl implements IBankService {
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
+            LogUtil.error("/OpenApi/QueryBalance服务调用失败", e, this.getClass());
             //result="查询失败，请联系管理员";
             result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
             result += "110110#";
@@ -376,13 +379,18 @@ public class BankServiceImpl implements IBankService {
         object.put("appID", "1111111");
 
         String query = obj.toString();
+        LogUtil.info("[开始调用远程服务 用户查询]"+ bankHttpUrl.getSearchServInfo(),null, this.getClass());
+        LogUtil.info("输入参数[StdCcrQueryServReq]="+query,null, this.getClass());
         HttpResult result = HttpUtil.doPostJson(bankHttpUrl.getSearchServInfo(),
                 query, object);
         //状态码为请求成功
         if(result.getCode() == HttpStatus.SC_OK){
             return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
+        }else{
+            LogUtil.error("/bon3/searchServInfo服务调用失败", null, this.getClass());
+            return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
         }
-        return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
+        //return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
     }
 
     /**
