@@ -66,6 +66,7 @@ public class BankServiceImpl implements IBankService {
             StdCcrQueryServRes accountInfo = searchAcctInfo(phoneNum);//查询用户信息
             StdCcaQueryServResBean stdCcaQueryServResBean=accountInfo.getStdCcaQueryServRes();
             if(stdCcaQueryServResBean==null){//用户信息不存在
+                LogUtil.error("用户信息不存在", null, this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
                 result += "110110#";
             }
@@ -80,6 +81,7 @@ public class BankServiceImpl implements IBankService {
             String bankId = map.get("bankId").toString();
             String staffId = map.get("staffId").toString();
             if (bankId.equals("") || staffId.equals("") || bankHead.equals("false")) {
+                LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
                 result += "110110#";
             } else {
@@ -155,13 +157,14 @@ public class BankServiceImpl implements IBankService {
                     }
                     result += String.format("%1$-12s", num) + "#";//金额
                 } else {
+                    LogUtil.error("远程服务["+bankHttpUrl.getQueryBalanceUrl()+"]服务调用失败", null, this.getClass());
                     result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
                     result += "110110#";
                 }
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
-            LogUtil.error("/OpenApi/QueryBalance服务调用失败", e, this.getClass());
+            LogUtil.error("queryBalance服务调用失败", e, this.getClass());
             //result="查询失败，请联系管理员";
             result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
             result += "110110#";
@@ -188,11 +191,16 @@ public class BankServiceImpl implements IBankService {
             String bankId=map.get("bankId").toString();
             String staffId=map.get("staffId").toString();
             if(bankId.equals("")||staffId.equals("")||bankHead.equals("false")){
+                LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                 result+="120666#";
             }else{
+                String flowId=content.substring(0,12);
+                String areaId=content.substring(2,6);;
+                LogUtil.info("[调用数据库 查询余额充值流水号是否重复]",null, this.getClass());
+                LogUtil.info("输入参数[flowId]="+flowId+"[areaId=]"+areaId+"[bankId=]"+bankId,null, this.getClass());
                 String row=bankDao.checkRowNum(content.substring(0,12),packetHead.substring(2,6),bankId);
-                if(Integer.parseInt(row)<=0){
+                if(Integer.parseInt(row)==0){
                     //String content="000220000574313014344470          50.00201908090655121";
                     HashMap<String,Object> operAttrStructMap=new HashMap<String,Object>();//操作人属性
                     operAttrStructMap.put("staffId",staffId);
@@ -210,7 +218,7 @@ public class BankServiceImpl implements IBankService {
                     svcObjectStructMap.put("dataArea","");
 
 
-                    String flowId=content.substring(0,12);
+                   // String flowId=content.substring(0,12);
                     String rechargeSource="100001";
                     String num=content.substring(27,39).replaceAll(" ","");
                     float scale = Float.valueOf(num);
@@ -235,7 +243,8 @@ public class BankServiceImpl implements IBankService {
                     //bankHttpUrl=(BankHttpUrl)ac.getBean("BankHttpUrl");
                     Map<String,String> object=new HashMap<String, String>();
                     object.put("appID","1111111");
-
+                    LogUtil.info("[开始调用远程服务 余额充值]"+ bankHttpUrl.getRechargeBalanceUrl(),null, this.getClass());
+                    LogUtil.info("输入参数[RechargeBalanceReq]="+query,null, this.getClass());
                     HttpResult rechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
                     JSONObject json =JSON.parseObject(rechargeResult.getData());
                     //状态码为请求成功
@@ -258,14 +267,24 @@ public class BankServiceImpl implements IBankService {
                         bankChargeRecord.setStaff_id(staffId);
                         bankDao.insertBankChargeRecord(bankChargeRecord);
                     }else{
+                        LogUtil.error("调用远程服务["+bankHttpUrl.getRechargeBalanceUrl()+"]失败！",null,this.getClass());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                         result+="120666#";
                     }
+                }else if(Integer.parseInt(row)>0){
+                    LogUtil.error("余额充值流水号重复，充值失败！",null,this.getClass());
+                    result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
+                    result+="120666#";
+                }else{
+                    LogUtil.error("判断余额充值流水号是否重复失败！",null,this.getClass());
+                    result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
+                    result+="120666#";
                 }
             }
         }catch(Exception e){
-            System.out.println(e.getMessage());
-            result="查询失败，请联系管理员";
+            LogUtil.error("rechargeBalance服务调用失败！",e,this.getClass());
+            result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
+            result+="120666#";
         }
 
 
@@ -290,6 +309,7 @@ public class BankServiceImpl implements IBankService {
             String bankId = map.get("bankId").toString();
             String staffId = map.get("staffId").toString();
             if (bankId.equals("") || staffId.equals("") || bankHead.equals("false")) {
+                LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                 returnResult += "16030 #";
             } else {
@@ -335,7 +355,8 @@ public class BankServiceImpl implements IBankService {
                 bankHttpUrl = (BankHttpUrl) ac.getBean("BankHttpUrl");*/
                 Map<String, String> object = new HashMap<String, String>();
                 object.put("appID", "1111111");
-
+                LogUtil.info("[开始调用远程服务 余额充值]"+ bankHttpUrl.getRollRechargeBalanceUrl(),null, this.getClass());
+                LogUtil.info("输入参数[RollRechargeBalanceReq]="+query,null, this.getClass());
                 HttpResult RollRechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
                 JSONObject json = JSON.parseObject(RollRechargeResult.getData());
                 //状态码为请求成功
@@ -351,13 +372,16 @@ public class BankServiceImpl implements IBankService {
                     bankChargeRecord.setPayment_id(content.substring(27, 39));//缴费流水
                     bankDao.updateBankChargeRecord(bankChargeRecord);
                 } else {
+                    LogUtil.error("调用远程服务["+bankHttpUrl.getRollRechargeBalanceUrl()+"]失败！",null,this.getClass());
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                     returnResult += "16030 #";
                 }
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
-            returnResult="查询失败，请联系管理员";
+            LogUtil.error("调用rollRechargeBalance服务失败！",e,this.getClass());
+            returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
+            returnResult += "16030 #";
         }
 
 
@@ -391,7 +415,7 @@ public class BankServiceImpl implements IBankService {
         if(result.getCode() == HttpStatus.SC_OK){
             return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
         }else{
-            LogUtil.error("/bon3/searchServInfo服务调用失败", null, this.getClass());
+            LogUtil.error("远程服务/bon3/searchServInfo服务调用失败", null, this.getClass());
             return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
         }
         //return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
