@@ -2,11 +2,8 @@ package com.asiainfo.banksocket.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.asiainfo.banksocket.common.BankChargeRecord;
-import com.asiainfo.banksocket.common.BankHttpUrl;
-import com.asiainfo.banksocket.common.QueryBalanceRes;
+import com.asiainfo.banksocket.common.*;
 import com.asiainfo.banksocket.common.QueryBalanceRes.BalanceQuery;
-import com.asiainfo.banksocket.common.StdCcrQueryServRes;
 import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean;
 import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean.StdCcaQueryServListBean;
 import com.asiainfo.banksocket.common.utils.HttpUtil;
@@ -43,6 +40,9 @@ public class BankServiceImpl implements IBankService {
     @Autowired
     BankHttpUrl bankHttpUrl;
 
+    @Autowired
+    ErrorCode errorCode;
+
 
 
 
@@ -60,6 +60,7 @@ public class BankServiceImpl implements IBankService {
     public String queryBalance(String packetHead, String request) throws IOException,ClientProtocolException {
         String result = "";
         try {
+            LogUtil.info("socket接收的串为["+request+"]",null, this.getClass());
             String content = request.substring(33, request.length() - 1);//内容
             String phoneNum=content.substring(6, 26);
             phoneNum=phoneNum.replace(" ","");
@@ -68,22 +69,31 @@ public class BankServiceImpl implements IBankService {
             if(stdCcaQueryServResBean==null){//用户信息不存在
                 LogUtil.error("用户信息不存在", null, this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                result += "110110#";
+                result += "110"+errorCode.getUserInfoNoData()+"#";
+                LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                return result;
             }
             List<StdCcaQueryServListBean> StdCcaQueryServListBean=stdCcaQueryServResBean.getStdCcaQueryServList();
             String custName = StdCcaQueryServListBean.get(0).getCustName();
             String destinationAttr=StdCcaQueryServListBean.get(0).getDestinationAttr();
+            LogUtil.info("用户名称为："+custName,null, this.getClass());
            /* String custName = "王军";
             String destinationAttr="2";*/
             //String content="CDMA  13324382737         20190812065724";
+            LogUtil.info("获取staffId、bankHead、bankId···",null, this.getClass());
             HashMap<String, String> map = getBankInfo(packetHead);
             String bankHead = map.get("bankHead").toString();
             String bankId = map.get("bankId").toString();
             String staffId = map.get("staffId").toString();
+            LogUtil.info("获取到的值为[bankHead]="+bankHead,null, this.getClass());
+            LogUtil.info("获取到的值为[bankId]="+bankId,null, this.getClass());
+            LogUtil.info("获取到的值为[staffId]="+staffId,null, this.getClass());
             if (bankId.equals("") || staffId.equals("") || bankHead.equals("false")) {
                 LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                result += "110110#";
+                result += "110"+errorCode.getBankidStaffidBankheadNoData()+"#";
+                LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                return result;
             } else {
                 HashMap<String, Object> operAttrStructMap = new HashMap<String, Object>();//操作人属性
                 operAttrStructMap.put("staffId", staffId);
@@ -95,6 +105,8 @@ public class BankServiceImpl implements IBankService {
 
 
                 phoneNum=phoneNum.replace(" ","");//手机号码
+                LogUtil.info("号码为："+phoneNum,null, this.getClass());
+                LogUtil.info("destinationAttr="+destinationAttr,null, this.getClass());
                 HashMap<String, Object> svcObjectStructMap = new HashMap<String, Object>();//服务对象条件
                 svcObjectStructMap.put("objType", "3");
                 svcObjectStructMap.put("objValue", phoneNum);
@@ -102,7 +114,7 @@ public class BankServiceImpl implements IBankService {
                 svcObjectStructMap.put("dataArea", "");
 
 
-                String rechargeSource = "手机";
+                String rechargeSource = "1003";
 
                 String resp = null;
                 JSONObject obj = new JSONObject();
@@ -125,10 +137,18 @@ public class BankServiceImpl implements IBankService {
                     balanceResult = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
                 } catch (ClientProtocolException e) {
                     LogUtil.error("连接错误", e, this.getClass());
+                    result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    result += "110"+errorCode.getConnectError()+"#";
+                    LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                    return result;
                 } catch (IOException e) {
                     LogUtil.error("IO流错误", e, this.getClass());
+                    result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    result += "110"+errorCode.getIoConnectError()+"#";
+                    LogUtil.info("返回的串为["+result+"]",null, this.getClass());
                     return result;
                 }
+                LogUtil.info("调用远程服务返回的报文："+balanceResult.getData().toString(),null, this.getClass());
                 System.out.println(balanceResult.getCode());
                 if (balanceResult.getCode() == HttpStatus.SC_OK) {
                     object.clear();
@@ -159,7 +179,9 @@ public class BankServiceImpl implements IBankService {
                 } else {
                     LogUtil.error("远程服务["+bankHttpUrl.getQueryBalanceUrl()+"]服务调用失败", null, this.getClass());
                     result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                    result += "110110#";
+                    result += "110"+errorCode.getQuerybalanceRemoteServiceError()+"#";
+                    LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                    return result;
                 }
             }
         }catch(Exception e){
@@ -167,9 +189,12 @@ public class BankServiceImpl implements IBankService {
             LogUtil.error("queryBalance服务调用失败", e, this.getClass());
             //result="查询失败，请联系管理员";
             result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-            result += "110110#";
+            result += "110"+errorCode.getServiceError()+"#";
+            LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+            return result;
 
         }
+        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
         return result;
     }
 
@@ -185,15 +210,22 @@ public class BankServiceImpl implements IBankService {
 
         String result="";
         try{
+            LogUtil.info("socket接收的串为："+param,null, this.getClass());
             String content=param.substring(33,param.length()-1);//内容
+            LogUtil.info("获取staffId、bankHead、bankId···",null, this.getClass());
             HashMap<String,String> map= getBankInfo(packetHead);
             String bankHead=map.get("bankHead").toString();
             String bankId=map.get("bankId").toString();
             String staffId=map.get("staffId").toString();
+            LogUtil.info("获取到的值为[bankHead]="+bankHead,null, this.getClass());
+            LogUtil.info("获取到的值为[bankId]="+bankId,null, this.getClass());
+            LogUtil.info("获取到的值为[staffId]="+staffId,null, this.getClass());
             if(bankId.equals("")||staffId.equals("")||bankHead.equals("false")){
                 LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                result+="120666#";
+                result+="120"+errorCode.getBankidStaffidBankheadNoData()+"#";
+                LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                return result;
             }else{
                 String flowId=content.substring(0,12);
                 String areaId=content.substring(2,6);;
@@ -210,7 +242,7 @@ public class BankServiceImpl implements IBankService {
                     operAttrStructMap.put("operServiceId","");
                     operAttrStructMap.put("lanId",0);
                     String objValue=content.substring(12,27).replace(" ","");
-
+                    LogUtil.info("号码为："+objValue,null, this.getClass());
                     HashMap<String,Object> svcObjectStructMap=new HashMap<String,Object>();//服务对象条件
                     svcObjectStructMap.put("objType","1");
                     svcObjectStructMap.put("objValue",objValue);
@@ -219,13 +251,13 @@ public class BankServiceImpl implements IBankService {
 
 
                    // String flowId=content.substring(0,12);
-                    String rechargeSource="100001";
+                    String rechargeSource="10003";
                     String num=content.substring(27,39).replaceAll(" ","");
                     float scale = Float.valueOf(num);
                     DecimalFormat fnum = new DecimalFormat("##0.00");
                     scale = Float.valueOf(fnum.format(scale));
                     Integer rechargeAmount= (int)(scale*100);
-
+                    LogUtil.info("充值金额为（分）："+rechargeAmount,null, this.getClass());
                     String resp= null;
                     JSONObject obj = new JSONObject();
                     obj.put("operAttrStruct", operAttrStructMap);
@@ -245,7 +277,24 @@ public class BankServiceImpl implements IBankService {
                     object.put("appID","1111111");
                     LogUtil.info("[开始调用远程服务 余额充值]"+ bankHttpUrl.getRechargeBalanceUrl(),null, this.getClass());
                     LogUtil.info("输入参数[RechargeBalanceReq]="+query,null, this.getClass());
-                    HttpResult rechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
+                    HttpResult rechargeResult=null;
+                    try {
+                        rechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
+                        LogUtil.info("调用远程服务返回的报文："+rechargeResult.getData().toString(),null, this.getClass());
+                    } catch (ClientProtocolException e) {
+                        LogUtil.error("连接错误", e, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "110"+errorCode.getConnectError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    } catch (IOException e) {
+                        LogUtil.error("IO流错误", e, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "110"+errorCode.getIoConnectError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    }
+                    //HttpResult rechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRechargeBalanceUrl(), query, object);
                     JSONObject json =JSON.parseObject(rechargeResult.getData());
                     //状态码为请求成功
                     if(rechargeResult.getCode() == HttpStatus.SC_OK){
@@ -269,27 +318,33 @@ public class BankServiceImpl implements IBankService {
                     }else{
                         LogUtil.error("调用远程服务["+bankHttpUrl.getRechargeBalanceUrl()+"]失败！",null,this.getClass());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                        result+="120666#";
+                        result+="120"+errorCode.getRechargeBalanceRemoteServiceError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
                     }
                 }else if(Integer.parseInt(row)>0){
                     LogUtil.error("余额充值流水号重复，充值失败！",null,this.getClass());
                     result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                    result+="120666#";
+                    result+="120"+errorCode.getRechargeBalanceFlowidSecond()+"#";
+                    LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                    return result;
                 }else{
                     LogUtil.error("判断余额充值流水号是否重复失败！",null,this.getClass());
                     result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                    result+="120666#";
+                    result+="120"+errorCode.getRechargeBalanceFlowidError()+"#";
+                    LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                    return result;
                 }
             }
         }catch(Exception e){
             LogUtil.error("rechargeBalance服务调用失败！",e,this.getClass());
             result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-            result+="120666#";
+            result+="120"+errorCode.getServiceError()+"#";
         }
 
 
 
-
+        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
         return result;
     }
 
@@ -302,16 +357,23 @@ public class BankServiceImpl implements IBankService {
             throws ClientProtocolException, IOException{
         String returnResult="";
         try {
+            LogUtil.info("socket接收的串为："+request,null, this.getClass());
             String content = request.substring(33, request.length() - 1);//内容
             //String content="000220030463363019952002   3769099055         50.0020190809141357";
             HashMap<String, String> map = getBankInfo(packetHead);
+            LogUtil.info("获取staffId、bankHead、bankId···",null, this.getClass());
             String bankHead = map.get("bankHead").toString();
             String bankId = map.get("bankId").toString();
             String staffId = map.get("staffId").toString();
+            LogUtil.info("获取到的值为[bankHead]="+bankHead,null, this.getClass());
+            LogUtil.info("获取到的值为[bankId]="+bankId,null, this.getClass());
+            LogUtil.info("获取到的值为[staffId]="+staffId,null, this.getClass());
             if (bankId.equals("") || staffId.equals("") || bankHead.equals("false")) {
                 LogUtil.error("bankId或staffId或bankHead值为空",null,this.getClass());
                 returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                returnResult += "16030 #";
+                returnResult += "160"+errorCode.getBankidStaffidBankheadNoData()+"#";
+                LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                return returnResult;
             } else {
                 HashMap<String, Object> operAttrStructMap = new HashMap<String, Object>();//操作人属性
                 operAttrStructMap.put("staffId", staffId);
@@ -329,6 +391,7 @@ public class BankServiceImpl implements IBankService {
 
                 String objValue = content.substring(12, 27);
                 objValue=objValue.replace(" ","");
+                LogUtil.info("号码为："+objValue,null, this.getClass());
                 String prodInstId = bankDao.queryProdInstId(objValue);
                 HashMap<String, Object> result = bankDao.queryProdInstInfo(prodInstId, objValue);
                 String acc_Num = result.get("ACC_NUM").toString();
@@ -357,7 +420,24 @@ public class BankServiceImpl implements IBankService {
                 object.put("appID", "1111111");
                 LogUtil.info("[开始调用远程服务 余额充值]"+ bankHttpUrl.getRollRechargeBalanceUrl(),null, this.getClass());
                 LogUtil.info("输入参数[RollRechargeBalanceReq]="+query,null, this.getClass());
-                HttpResult RollRechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
+                HttpResult RollRechargeResult=null;
+                try {
+                    RollRechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
+                    LogUtil.info("远程服务返回的报文："+RollRechargeResult.getData().toString(),null, this.getClass());
+                } catch (ClientProtocolException e) {
+                    LogUtil.error("连接错误", e, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getConnectError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                } catch (IOException e) {
+                    LogUtil.error("IO流错误", e, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getIoConnectError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                }
+               // HttpResult RollRechargeResult = HttpUtil.doPostJson(bankHttpUrl.getRollRechargeBalanceUrl(), query, object);
                 JSONObject json = JSON.parseObject(RollRechargeResult.getData());
                 //状态码为请求成功
                 if (RollRechargeResult.getCode() == HttpStatus.SC_OK) {
@@ -374,17 +454,21 @@ public class BankServiceImpl implements IBankService {
                 } else {
                     LogUtil.error("调用远程服务["+bankHttpUrl.getRollRechargeBalanceUrl()+"]失败！",null,this.getClass());
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-                    returnResult += "16030 #";
+                    returnResult += "160"+errorCode.getRollRechargeBalanceRemoteServiceError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
                 }
             }
         }catch(Exception e){
             System.out.println(e.getMessage());
             LogUtil.error("调用rollRechargeBalance服务失败！",e,this.getClass());
             returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
-            returnResult += "16030 #";
+            returnResult += "160"+errorCode.getServiceError()+"#";
+            LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+            return returnResult;
         }
 
-
+        LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
         return returnResult;
     }
 
@@ -412,6 +496,7 @@ public class BankServiceImpl implements IBankService {
         HttpResult result = HttpUtil.doPostJson(bankHttpUrl.getSearchServInfo(),
                 query, object);
         //状态码为请求成功
+        LogUtil.info("调用远程服务返回的报文："+result.getData().toString(),null, this.getClass());
         if(result.getCode() == HttpStatus.SC_OK){
             return JSON.parseObject(result.getData(), StdCcrQueryServRes.class) ;
         }else{
