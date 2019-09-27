@@ -1,11 +1,8 @@
 package com.asiainfo.banksocket.common;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Repository;
 
 @Configuration
 @PropertySource("classpath:config/bankConfig.properties")
