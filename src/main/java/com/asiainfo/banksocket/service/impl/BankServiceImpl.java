@@ -2,13 +2,15 @@ package com.asiainfo.banksocket.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.asiainfo.banksocket.common.BankChargeRecord;
 import com.asiainfo.banksocket.common.BankHttpUrl;
 import com.asiainfo.banksocket.common.QueryBalanceRes;
 import com.asiainfo.banksocket.common.QueryBalanceRes.BalanceQuery;
 import com.asiainfo.banksocket.common.StdCcrQueryServRes;
+import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean;
+import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean.StdCcaQueryServListBean;
 import com.asiainfo.banksocket.common.utils.HttpUtil;
+import com.asiainfo.banksocket.common.utils.HttpUtil.HttpResult;
 import com.asiainfo.banksocket.common.utils.LogUtil;
 import com.asiainfo.banksocket.dao.BankDao;
 import com.asiainfo.banksocket.service.IBankService;
@@ -19,19 +21,15 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
-import com.asiainfo.banksocket.common.utils.HttpUtil;
-import com.asiainfo.banksocket.common.utils.HttpUtil.HttpResult;
-import org.apache.http.client.ClientProtocolException;
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
+import java.io.File;
+import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.*;
-import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean;
-import com.asiainfo.banksocket.common.StdCcrQueryServRes.StdCcaQueryServResBean.StdCcaQueryServListBean;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -59,7 +57,7 @@ public class BankServiceImpl implements IBankService {
      *  @return
      * */
     @Override
-    public String queryBalance(String packetHead, String request) throws IOException {
+    public String queryBalance(String packetHead, String request) throws IOException,ClientProtocolException {
         String result = "";
         try {
             String content = request.substring(33, request.length() - 1);//内容
@@ -120,9 +118,15 @@ public class BankServiceImpl implements IBankService {
                 object.put("appID", "1111111");
                 LogUtil.info("[开始调用远程服务 余额查询]"+ bankHttpUrl.getQueryBalanceUrl(),null, this.getClass());
                 LogUtil.info("输入参数[QueryBalanceReq]="+query,null, this.getClass());
-                HttpResult balanceResult = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
-
-
+                HttpResult balanceResult = null;
+                try {
+                    balanceResult = HttpUtil.doPostJson(bankHttpUrl.getQueryBalanceUrl(), query, object);
+                } catch (ClientProtocolException e) {
+                    LogUtil.error("连接错误", e, this.getClass());
+                } catch (IOException e) {
+                    LogUtil.error("IO流错误", e, this.getClass());
+                    return result;
+                }
                 System.out.println(balanceResult.getCode());
                 if (balanceResult.getCode() == HttpStatus.SC_OK) {
                     object.clear();
