@@ -18,12 +18,12 @@
     </select>
     <insert id="insertBankChargeRecord" parameterType="com.asiainfo.banksocket.common.BankChargeRecord">
         INSERT INTO bank_charge_record(payment_id,other_payment_id,created_datetime,payment_datetime,amount,state,so_region_code,bankid,busi_code,staff_id)
-        VALUES(#{bankChargeRecord.payment_id},#{bankChargeRecord.other_payment_id},#{bankChargeRecord.created_date},#{bankChargeRecord.payment_date},#{bankChargeRecord.amount},#{bankChargeRecord.state},
+        VALUES(#{bankChargeRecord.payment_id},#{bankChargeRecord.other_payment_id},now(),now(),#{bankChargeRecord.amount},#{bankChargeRecord.state},
         #{bankChargeRecord.so_region_code},#{bankChargeRecord.bankid},#{bankChargeRecord.busi_code},#{bankChargeRecord.staff_id})
     </insert>
     <update id="updateBankChargeRecord"  parameterType="com.asiainfo.banksocket.common.BankChargeRecord">
         UPDATE bank_charge_record SET unpay_other_payment_id = #{bankChargeRecord.unpay_other_payment_id} ,
         unpay_payment_id = #{bankChargeRecord.unpay_payment_id},state = -1
-        WHERE payment_id = #{bankChargeRecord.payment_id}
+        WHERE other_payment_id = #{bankChargeRecord.payment_id}
     </update>
 </mapper>

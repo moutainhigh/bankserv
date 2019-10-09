@@ -1,0 +1,3 @@
+[WARN ] 2019-09-29 15:51:45 [restartedMain] o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'bankMapper' and 'com.asiainfo.banksocket.mapper.BankMapper' mapperInterface. Bean already defined with the same name!
+[WARN ] 2019-09-29 15:51:45 [restartedMain] o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.asiainfo.banksocket.mapper]' package. Please check your configuration.
+[WARN ] 2019-09-29 15:52:02 [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

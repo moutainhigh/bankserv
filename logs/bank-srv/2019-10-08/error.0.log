@@ -1,0 +1,103 @@
+[ERROR] 2019-10-08 10:59:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务/bon3/searchServInfo服务调用失败
+[ERROR] 2019-10-08 10:59:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户信息不存在
+[ERROR] 2019-10-08 14:26:54 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务/bon3/searchServInfo服务调用失败
+[ERROR] 2019-10-08 14:26:54 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户信息不存在
+[ERROR] 2019-10-08 14:51:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RechargeBalance]失败！
+[ERROR] 2019-10-08 15:39:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - queryBalance服务调用失败
+java.lang.NullPointerException: null
+	at com.asiainfo.banksocket.service.impl.BankServiceImpl.queryBalance(BankServiceImpl.java:77)
+	at com.asiainfo.banksocket.netty.BankServerHandler.channelRead(BankServerHandler.java:71)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:647)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:582)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:461)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2019-10-08 15:43:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - queryBalance服务调用失败
+java.lang.NullPointerException: null
+	at com.asiainfo.banksocket.service.impl.BankServiceImpl.queryBalance(BankServiceImpl.java:77)
+	at com.asiainfo.banksocket.netty.BankServerHandler.channelRead(BankServerHandler.java:71)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:647)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:582)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:461)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2019-10-08 15:44:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - queryBalance服务调用失败
+java.lang.NullPointerException: null
+	at com.asiainfo.banksocket.service.impl.BankServiceImpl.queryBalance(BankServiceImpl.java:77)
+	at com.asiainfo.banksocket.netty.BankServerHandler.channelRead(BankServerHandler.java:71)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:647)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:582)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:461)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2019-10-08 15:46:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - queryBalance服务调用失败
+java.lang.NullPointerException: null
+	at com.asiainfo.banksocket.service.impl.BankServiceImpl.queryBalance(BankServiceImpl.java:77)
+	at com.asiainfo.banksocket.netty.BankServerHandler.channelRead(BankServerHandler.java:71)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1434)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:965)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:647)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:582)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:461)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2019-10-08 15:50:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务[http://136.160.161.100:8083/billing/acct/QueryBalance;]服务调用失败
+[ERROR] 2019-10-08 16:03:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-08 16:04:01 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-08 16:06:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-08 16:18:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-08 16:28:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！

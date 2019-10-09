@@ -231,23 +231,34 @@ public class BankServiceImpl implements IBankService {
                 String areaId=content.substring(2,6);;
                 LogUtil.info("[调用数据库 查询余额充值流水号是否重复]",null, this.getClass());
                 LogUtil.info("输入参数[flowId]="+flowId+"[areaId=]"+areaId+"[bankId=]"+bankId,null, this.getClass());
-                String row=bankDao.checkRowNum(content.substring(0,12),packetHead.substring(2,6),bankId);
+                String row=bankDao.checkRowNum(flowId,packetHead.substring(2,6),bankId);
                 if(Integer.parseInt(row)==0){
                     //String content="000220000574313014344470          50.00201908090655121";
                     HashMap<String,Object> operAttrStructMap=new HashMap<String,Object>();//操作人属性
                     operAttrStructMap.put("staffId",staffId);
                     operAttrStructMap.put("operOrgId",bankId);
-                    operAttrStructMap.put("operTime",content.substring(39));
+                    operAttrStructMap.put("operTime",content.substring(39,53));
                     operAttrStructMap.put("operPost",0);
-                    operAttrStructMap.put("operServiceId","");
+                    operAttrStructMap.put("operServiceId","1");
                     operAttrStructMap.put("lanId",0);
                     String objValue=content.substring(12,27).replace(" ","");
                     LogUtil.info("号码为："+objValue,null, this.getClass());
+                  /*  StdCcrQueryServRes accountInfo = searchAcctInfo(objValue);//查询用户信息
+                    StdCcaQueryServResBean stdCcaQueryServResBean=accountInfo.getStdCcaQueryServRes();
+                    if(stdCcaQueryServResBean==null){//用户信息不存在
+                        LogUtil.error("用户信息不存在", null, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "120"+errorCode.getUserInfoNoData()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    }
+                    List<StdCcaQueryServListBean> StdCcaQueryServListBean=stdCcaQueryServResBean.getStdCcaQueryServList();
+                    String destinationAttr=StdCcaQueryServListBean.get(0).getDestinationAttr();*/
                     HashMap<String,Object> svcObjectStructMap=new HashMap<String,Object>();//服务对象条件
                     svcObjectStructMap.put("objType","1");
                     svcObjectStructMap.put("objValue",objValue);
-                    svcObjectStructMap.put("objAttr","2");
-                    svcObjectStructMap.put("dataArea","");
+                    svcObjectStructMap.put("objAttr","1");
+                    svcObjectStructMap.put("dataArea","1");
 
 
                    // String flowId=content.substring(0,12);
@@ -264,8 +275,8 @@ public class BankServiceImpl implements IBankService {
                     obj.put("flowId", flowId);
                     obj.put("rechargeSource",rechargeSource);
                     obj.put("svcObjectStruct", svcObjectStructMap);
-                    obj.put("destinationIdType","1");
-                    obj.put("balanceItemTypeId","");
+                    obj.put("destinationIdType","3");
+                    obj.put("balanceItemTypeId","0");
                     obj.put("rechargeUnit","0");
                     obj.put("rechargeAmount",rechargeAmount);
                     obj.put("systemId","1");
@@ -284,13 +295,13 @@ public class BankServiceImpl implements IBankService {
                     } catch (ClientProtocolException e) {
                         LogUtil.error("连接错误", e, this.getClass());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                        result += "110"+errorCode.getConnectError()+"#";
+                        result += "120"+errorCode.getConnectError()+"#";
                         LogUtil.info("返回的串为["+result+"]",null, this.getClass());
                         return result;
                     } catch (IOException e) {
                         LogUtil.error("IO流错误", e, this.getClass());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                        result += "110"+errorCode.getIoConnectError()+"#";
+                        result += "120"+errorCode.getIoConnectError()+"#";
                         LogUtil.info("返回的串为["+result+"]",null, this.getClass());
                         return result;
                     }
@@ -302,12 +313,13 @@ public class BankServiceImpl implements IBankService {
                         object.putAll(rechargeResult.getHeaders());
                         result = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
                         result += "1200  ";
-                        String paymentId = "3769036028  #";//暂时写死，后面补充 （12位）  计费流水
+                        String paymentId = "3769036028";//暂时写死，后面补充 （12位）  计费流水
+                        result += paymentId+"  #";
                         BankChargeRecord bankChargeRecord=new BankChargeRecord();
-                        bankChargeRecord.setPayment_id("3769036028");
+                        bankChargeRecord.setPayment_id(paymentId);
                         bankChargeRecord.setOther_payment_id(flowId);
-                        bankChargeRecord.setCreated_date(content.substring(39,content.length()-1));
-                        bankChargeRecord.setPayment_date(json.get("effDate").toString());
+                        //bankChargeRecord.setCreated_date(content.substring(39,content.length()-1));
+                        //bankChargeRecord.setPayment_date(json.get("effDate").toString());
                         bankChargeRecord.setAmount(String.valueOf(rechargeAmount));
                         bankChargeRecord.setState("0");
                         bankChargeRecord.setSo_region_code(packetHead.substring(2,6));
@@ -356,6 +368,7 @@ public class BankServiceImpl implements IBankService {
     public String rollRechargeBalance(String  packetHead, String request)
             throws ClientProtocolException, IOException{
         String returnResult="";
+        String destinationAttr = "";
         try {
             LogUtil.info("socket接收的串为："+request,null, this.getClass());
             String content = request.substring(33, request.length() - 1);//内容
@@ -380,14 +393,9 @@ public class BankServiceImpl implements IBankService {
                 operAttrStructMap.put("operOrgId", bankId);
                 operAttrStructMap.put("operTime", content.substring(51));
                 operAttrStructMap.put("operPost", 0);
-                operAttrStructMap.put("operServiceId", "");
+                operAttrStructMap.put("operServiceId", "1");
                 operAttrStructMap.put("lanId", 0);
-                HashMap<String, Object> svcObjectStructMap = new HashMap<String, Object>();//服务对象条件
-                svcObjectStructMap.put("objType", "3");
-                //svcObjectStructMap.put("objValue",content.substring(12,27));
-                svcObjectStructMap.put("objValue", "18143661019");
-                svcObjectStructMap.put("objAttr", "");
-                svcObjectStructMap.put("dataArea", "");
+
 
                 String objValue = content.substring(12, 27);
                 objValue=objValue.replace(" ","");
@@ -396,21 +404,25 @@ public class BankServiceImpl implements IBankService {
                 HashMap<String, Object> result = bankDao.queryProdInstInfo(prodInstId, objValue);
                 String acc_Num = result.get("ACC_NUM").toString();
                 String prod_id = result.get("PROD_ID").toString();
-                if (prod_id.equals("379")) {
-                    prod_id = "2";
+
+                if("379".equals(prod_id)) {
+                    destinationAttr = "2";
                 }
 
-                //379 -- 移动
-                //String acc_Num="18143661019";String prod_id="2";
+                if("280000002".equals(prod_id)) {
+                    destinationAttr = "3";
+                }
 
 
+                System.out.println(destinationAttr);
                 String resp = null;
                 JSONObject obj = new JSONObject();
+                String srcServiceId=content.substring(27, 39).replace(" ","");
                 obj.put("operAttrStruct", operAttrStructMap);
-                obj.put("srcServiceId", content.substring(27, 39));
+                obj.put("srcServiceId", srcServiceId);
                 obj.put("reqServiceId", content.substring(0, 12));
                 obj.put("destinationAccount", acc_Num);
-                obj.put("destinationAttr", prod_id);
+                obj.put("destinationAttr",destinationAttr);
                 obj.put("systemId", "1");
                 String query = obj.toString();
                 // log.info("发送到URL的报文为：");log.info(query);
@@ -427,13 +439,13 @@ public class BankServiceImpl implements IBankService {
                 } catch (ClientProtocolException e) {
                     LogUtil.error("连接错误", e, this.getClass());
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                    returnResult += "110"+errorCode.getConnectError()+"#";
+                    returnResult += "160"+errorCode.getConnectError()+"#";
                     LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
                     return returnResult;
                 } catch (IOException e) {
                     LogUtil.error("IO流错误", e, this.getClass());
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
-                    returnResult += "110"+errorCode.getIoConnectError()+"#";
+                    returnResult += "160"+errorCode.getIoConnectError()+"#";
                     LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
                     return returnResult;
                 }
@@ -486,7 +498,7 @@ public class BankServiceImpl implements IBankService {
         stdCcrQueryAcctMap.put("queryType","2");
 
         JSONObject obj = new JSONObject();
-        obj.put("stdCcrQueryAcct", stdCcrQueryAcctMap);
+        obj.put("stdCcrQueryServ", stdCcrQueryAcctMap);
         Map<String, String> object = new HashMap<String, String>();
         object.put("appID", "1111111");
 
