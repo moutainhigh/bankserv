@@ -1,0 +1,519 @@
+[INFO ] 2019-10-10 09:27:46 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 7376 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-10 09:27:46 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-10 09:27:48 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-10 09:27:48 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-10 09:27:58 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-10 09:27:59 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 130ms. Found 0 repository interfaces.
+[INFO ] 2019-10-10 09:28:02 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9665cbf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-10 09:28:07 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-10 09:28:08 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-10 09:28:09 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-10 09:28:10 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-10 09:28:10 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 22140 ms
+[INFO ] 2019-10-10 09:28:35 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-10 09:29:27 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 6876 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-10 09:29:27 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-10 09:29:27 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-10 09:29:27 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-10 09:29:29 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-10 09:29:29 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81ms. Found 0 repository interfaces.
+[INFO ] 2019-10-10 09:29:30 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c2a1f813] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-10 09:29:31 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-10 09:29:32 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-10 09:29:32 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-10 09:29:32 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4614 ms
+[INFO ] 2019-10-10 09:29:34 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-10 09:29:35 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-10 09:29:35 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-10 09:29:36 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-10 09:29:37 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-10 09:29:38 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 09:29:41 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 09:29:42 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-10 09:29:42 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 09:29:42 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-10 09:29:42 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 16.16 seconds (JVM running for 22.534)
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：G204320010          88        1201001512371335001028069     50.00       201910020021530#
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GS05
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80005
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000051
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 10:13:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=100151237133[areaId=]0151[bankId=]80005
+[INFO ] 2019-10-10 10:13:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：5001028069
+[INFO ] 2019-10-10 10:13:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：5000
+[INFO ] 2019-10-10 10:13:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 10:13:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":5000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80005","staffId":"10000051","operTime":"20191002002153"},"svcObjectStruct":{"objValue":"5001028069","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"100151237133"}
+[INFO ] 2019-10-10 10:15:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002050,"acctId":5001028069,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002207,"resultCode":"0","resultMsg":"SUCCESS","retBalance":5000,"unitTypeId":0}
+[INFO ] 2019-10-10 10:16:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[G204320010          49        1200  3769036028  #]
+[INFO ] 2019-10-10 10:27:59 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：G204320010          88        1601002200304635001028069     100151237133       50.0020191002002153#
+[INFO ] 2019-10-10 10:28:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:28:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GS05
+[INFO ] 2019-10-10 10:28:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80005
+[INFO ] 2019-10-10 10:28:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000051
+[INFO ] 2019-10-10 10:28:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：5001028069
+[INFO ] 2019-10-10 10:28:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 10:28:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"100151237133","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80005","staffId":"10000051","operTime":"20191002002153"},"destinationAccount":"18943520507"}
+[INFO ] 2019-10-10 10:29:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002208}
+[INFO ] 2019-10-10 10:29:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[G204320010          49        1600  3769036028  #]
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：G204320010          88        1201001512371335001028069     50.00       201910020021530#
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GS05
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80005
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000051
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=100151237133[areaId=]0151[bankId=]80005
+[INFO ] 2019-10-10 10:30:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[G204320010          49        12010008#]
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：C10431              88        120190809006434313009637459           2.00201908090754431#
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000059
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=190809006434[areaId=]0809[bankId=]80003
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009637459
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：200
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 10:40:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":200,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000059","operTime":"20190809075443"},"svcObjectStruct":{"objValue":"313009637459","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"190809006434"}
+[INFO ] 2019-10-10 10:41:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002051,"acctId":313009637459,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002209,"resultCode":"0","resultMsg":"SUCCESS","retBalance":200,"unitTypeId":0}
+[INFO ] 2019-10-10 10:42:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[C10431              49        1200  3769036028  #]
+[INFO ] 2019-10-10 10:46:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：C10431              88        160100220030463313009637459     190809006434        2.00201908090754431#
+[INFO ] 2019-10-10 10:46:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:46:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-10 10:46:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-10 10:46:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000059
+[INFO ] 2019-10-10 10:46:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009637459
+[INFO ] 2019-10-10 10:46:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 10:46:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"1908090064","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000059","operTime":"00201908090754431"},"destinationAccount":"18166826664"}
+[INFO ] 2019-10-10 10:46:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 10:47:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[C10431              49        16010010#]
+[INFO ] 2019-10-10 10:47:25 [Thread-39] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 10:47:25 [Thread-39] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 10:47:25 [Thread-39] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-10 10:48:05 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 8280 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-10 10:48:05 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-10 10:48:06 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-10 10:48:06 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-10 10:48:08 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-10 10:48:09 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117ms. Found 0 repository interfaces.
+[INFO ] 2019-10-10 10:48:09 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1ebba29a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-10 10:48:11 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-10 10:48:12 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-10 10:48:13 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-10 10:48:13 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-10 10:48:13 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7357 ms
+[INFO ] 2019-10-10 10:48:16 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-10 10:48:16 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-10 10:48:16 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-10 10:48:17 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-10 10:48:18 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-10 10:48:18 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 10:48:20 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 10:48:20 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-10 10:48:20 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 10:48:20 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-10 10:48:20 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 18.714 seconds (JVM running for 25.677)
+[INFO ] 2019-10-10 10:54:41 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：C10431              88        160100220030463313009637459     190809006434        2.00201908090754431#
+[INFO ] 2019-10-10 10:54:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:54:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-10 10:54:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-10 10:54:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000059
+[INFO ] 2019-10-10 10:54:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009637459
+[INFO ] 2019-10-10 10:54:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 10:54:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"1908090064","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000059","operTime":"00201908090754"},"destinationAccount":"18166826664"}
+[INFO ] 2019-10-10 10:55:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 10:55:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[C10431              49        16010010#]
+[INFO ] 2019-10-10 10:55:18 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：C10431              88        160100220030463313009637459     190809006434        2.00201908090754431#
+[INFO ] 2019-10-10 10:57:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:57:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-10 10:57:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-10 10:57:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000059
+[INFO ] 2019-10-10 10:57:10 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009637459
+[INFO ] 2019-10-10 10:57:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 10:57:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"1908090064","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000059","operTime":"00201908090754"},"destinationAccount":"18166826664"}
+[INFO ] 2019-10-10 10:57:18 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 10:57:19 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[C10431              49        16010010#]
+[INFO ] 2019-10-10 10:57:20 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：C10431              88        160100220030463313009637459   190809006434        2.00201908090754431#
+[INFO ] 2019-10-10 10:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 10:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-10 10:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-10 10:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000059
+[INFO ] 2019-10-10 10:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009637459
+[INFO ] 2019-10-10 10:57:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 10:57:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"190809006434","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000059","operTime":"20190809075443"},"destinationAccount":"18166826664"}
+[INFO ] 2019-10-10 10:57:32 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002210}
+[INFO ] 2019-10-10 10:57:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[C10431              49        1600  3769036028  #]
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        120088712164056313009496325          50.00201908031058421#
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=088712164056[areaId=]8712[bankId=]80011
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009496325
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：5000
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 14:13:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":5000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80011","staffId":"10000086","operTime":"20190803105842"},"svcObjectStruct":{"objValue":"313009496325","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"088712164056"}
+[INFO ] 2019-10-10 14:14:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002052,"acctId":313009496325,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002211,"resultCode":"0","resultMsg":"SUCCESS","retBalance":5000,"unitTypeId":0}
+[INFO ] 2019-10-10 14:14:28 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        1200  3769036028  #]
+[INFO ] 2019-10-10 14:23:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        1601002200304634313009496325  088712164056       50.0020190803105842#
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：4313009496325
+[INFO ] 2019-10-10 14:23:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        16010006#]
+[INFO ] 2019-10-10 14:23:42 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        1601002200304634313009496325  088712164056       50.0020190803105842#
+[INFO ] 2019-10-10 14:24:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:24:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:24:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:24:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:24:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：4313009496325
+[INFO ] 2019-10-10 14:24:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        16010006#]
+[INFO ] 2019-10-10 14:24:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        1601002200304634313009496325  088712164056       50.0020190803105842#
+[INFO ] 2019-10-10 14:24:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:24:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:24:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:24:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:24:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：4313009496325
+[INFO ] 2019-10-10 14:26:54 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        16010006#]
+[INFO ] 2019-10-10 14:27:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        160100220030463313009496325   088712164056       50.0020190803105842#
+[INFO ] 2019-10-10 14:27:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:27:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:27:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:27:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:27:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313009496325
+[INFO ] 2019-10-10 14:27:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 14:27:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"088712164056","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80011","staffId":"10000086","operTime":"20190803105842"},"destinationAccount":"18004433576"}
+[INFO ] 2019-10-10 14:27:52 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002212}
+[INFO ] 2019-10-10 14:27:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        1600  3769036028  #]
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        120000000059330313017230922   10.00       201909051908170#
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:35:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        12010002#]
+[INFO ] 2019-10-10 14:36:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        120000000059330313017230922   10.00       201909051908170#
+[INFO ] 2019-10-10 14:36:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:38:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:38:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=
+[INFO ] 2019-10-10 14:38:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:38:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        12010002#]
+[INFO ] 2019-10-10 14:41:11 [Thread-43] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 14:41:11 [Thread-43] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 14:41:11 [Thread-43] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-10 14:41:29 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 8636 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-10 14:41:29 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-10 14:41:29 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-10 14:41:29 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-10 14:41:32 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-10 14:41:32 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 186ms. Found 0 repository interfaces.
+[INFO ] 2019-10-10 14:41:33 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$40c885bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-10 14:41:35 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-10 14:41:36 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-10 14:41:36 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-10 14:41:36 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6620 ms
+[INFO ] 2019-10-10 14:41:38 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-10 14:41:39 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-10 14:41:39 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-10 14:41:40 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-10 14:41:40 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-10 14:41:41 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 14:41:42 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 14:41:43 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-10 14:41:43 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 14:41:43 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-10 14:41:43 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 17.705 seconds (JVM running for 24.304)
+[INFO ] 2019-10-10 14:42:37 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        120000000059330313017230922   10.00       201909051908170#
+[INFO ] 2019-10-10 14:42:37 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=000000059330[areaId=]0000[bankId=]80004
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：1000
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 14:42:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":1000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"svcObjectStruct":{"objValue":"313017230922","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"000000059330"}
+[INFO ] 2019-10-10 14:43:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002053,"acctId":313017230922,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002214,"resultCode":"0","resultMsg":"SUCCESS","retBalance":1000,"unitTypeId":0}
+[INFO ] 2019-10-10 14:44:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        1200  3769036028  #]
+[INFO ] 2019-10-10 14:46:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：GD0431    000000    88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 14:46:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:46:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-10 14:46:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-10 14:46:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-10 14:46:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 14:46:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 14:46:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80011","staffId":"10000086","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 14:46:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{}
+[INFO ] 2019-10-10 14:46:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    49        16010010#]
+[INFO ] 2019-10-10 14:47:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 14:47:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:47:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:47:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 14:47:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:47:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 14:47:28 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 14:47:28 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 14:47:54 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{}
+[INFO ] 2019-10-10 14:47:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 14:49:52 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 14:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 14:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:49:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 14:50:35 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 14:50:35 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 14:50:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{}
+[INFO ] 2019-10-10 14:50:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 14:54:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        120000000059536313016976462   8.00        201909051917030#
+[INFO ] 2019-10-10 14:54:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=000000059536[areaId=]0000[bankId=]80004
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：800
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 14:54:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":800,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905191703"},"svcObjectStruct":{"objValue":"313016976462","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"000000059536"}
+[INFO ] 2019-10-10 14:55:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002054,"acctId":313016976462,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002215,"resultCode":"0","resultMsg":"SUCCESS","retBalance":800,"unitTypeId":0}
+[INFO ] 2019-10-10 14:55:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        1200  3769036028  #]
+[INFO ] 2019-10-10 14:56:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 14:56:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 14:56:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 14:56:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 14:56:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 14:57:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 14:57:19 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 14:57:19 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 14:57:21 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{}
+[INFO ] 2019-10-10 14:57:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 15:02:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：J10431M001          88        12064620254    313012137612   300.00      201908080621350#
+[INFO ] 2019-10-10 15:02:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JL09
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80009
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000077
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=64620254    [areaId=]6202[bankId=]80009
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313012137612
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：30000
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 15:02:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":30000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80009","staffId":"10000077","operTime":"20190808062135"},"svcObjectStruct":{"objValue":"313012137612","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"64620254    "}
+[INFO ] 2019-10-10 15:02:52 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002055,"acctId":313012137612,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002216,"resultCode":"0","resultMsg":"SUCCESS","retBalance":30000,"unitTypeId":0}
+[INFO ] 2019-10-10 15:02:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[J10431M001          49        1200  3769036028  #]
+[INFO ] 2019-10-10 15:12:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：J10431M001          88        160100220030463313012137612   64620254          300.00201908080621350#
+[INFO ] 2019-10-10 15:12:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:12:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JL09
+[INFO ] 2019-10-10 15:12:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80009
+[INFO ] 2019-10-10 15:12:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000077
+[INFO ] 2019-10-10 15:12:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313012137612
+[INFO ] 2019-10-10 15:13:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:13:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"64620254","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80009","staffId":"10000077","operTime":"20190808062135"},"destinationAccount":"043110818262"}
+[INFO ] 2019-10-10 15:13:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002218}
+[INFO ] 2019-10-10 15:13:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[J10431M001          49        1600  3769036028  #]
+[INFO ] 2019-10-10 15:15:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：060439JLBM111111111188        1200002200002595001266821            50.00201908250535241#
+[INFO ] 2019-10-10 15:15:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=YZ06
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80006
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000049
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=000220000259[areaId=]0220[bankId=]80006
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：5001266821
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：5000
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 15:15:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":5000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80006","staffId":"10000049","operTime":"20190825053524"},"svcObjectStruct":{"objValue":"5001266821","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"000220000259"}
+[INFO ] 2019-10-10 15:16:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002056,"acctId":5001266821,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002221,"resultCode":"0","resultMsg":"SUCCESS","retBalance":5000,"unitTypeId":0}
+[INFO ] 2019-10-10 15:16:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[060439JLBM111111111149        1200  3769036028  #]
+[INFO ] 2019-10-10 15:18:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：060439JLBM111111111188        1601002200304635001266821     000220000259       50.00201908080621350#
+[INFO ] 2019-10-10 15:18:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:18:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=YZ06
+[INFO ] 2019-10-10 15:18:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80006
+[INFO ] 2019-10-10 15:18:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000049
+[INFO ] 2019-10-10 15:18:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：5001266821
+[INFO ] 2019-10-10 15:19:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:19:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000220000259","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80006","staffId":"10000049","operTime":"20190808062135"},"destinationAccount":"13321597768"}
+[INFO ] 2019-10-10 15:19:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002223}
+[INFO ] 2019-10-10 15:19:35 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[060439JLBM111111111149        1600  3769036028  #]
+[INFO ] 2019-10-10 15:27:00 [Thread-45] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 15:27:00 [Thread-45] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 15:27:00 [Thread-45] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-10 15:27:17 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 7764 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-10 15:27:17 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-10 15:27:18 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-10 15:27:18 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-10 15:27:19 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-10 15:27:19 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75ms. Found 0 repository interfaces.
+[INFO ] 2019-10-10 15:27:20 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99f9575c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-10 15:27:21 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-10 15:27:22 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-10 15:27:22 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-10 15:27:22 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4827 ms
+[INFO ] 2019-10-10 15:27:25 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-10 15:27:26 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-10 15:27:26 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-10 15:27:26 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-10 15:27:27 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-10 15:27:28 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-10 15:27:30 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-10 15:27:31 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-10 15:27:31 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-10 15:27:31 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-10 15:27:31 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 16.231 seconds (JVM running for 19.086)
+[INFO ] 2019-10-10 15:31:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 15:31:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:31:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 15:31:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 15:31:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 15:31:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 15:31:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:31:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 15:31:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 15:31:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 15:32:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 15:32:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:32:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 15:32:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 15:32:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 15:32:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 15:32:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:32:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 15:32:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 15:32:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 15:35:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160110220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 15:35:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:35:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 15:35:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 15:35:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 15:35:27 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 15:35:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:35:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"110220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 15:35:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 15:35:35 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 15:35:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160110220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 15:35:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 15:35:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 15:35:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 15:35:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 15:35:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 15:35:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 15:35:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"110220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 15:37:16 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 15:37:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 19:18:54 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160110220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 19:20:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 19:20:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 19:20:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 19:20:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 19:20:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 19:20:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 19:20:02 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"110220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 19:20:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 19:20:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 19:35:14 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160110220030463313016976462   000000059536        8.00201909051908170#
+[INFO ] 2019-10-10 19:35:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 19:35:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 19:35:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 19:35:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 19:35:15 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313016976462
+[INFO ] 2019-10-10 19:35:18 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 19:35:18 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"110220030463","systemId":"1","srcServiceId":"000000059536","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043110199603100231"}
+[INFO ] 2019-10-10 19:35:41 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 19:35:44 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 19:58:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：J10432M001          88        12064620720    3203683984     30.00       201908080624260#
+[INFO ] 2019-10-10 19:58:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 19:58:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JL09
+[INFO ] 2019-10-10 19:58:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80009
+[INFO ] 2019-10-10 19:58:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000078
+[INFO ] 2019-10-10 19:58:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [调用数据库 查询余额充值流水号是否重复]
+[INFO ] 2019-10-10 19:58:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[flowId]=64620720    [areaId=]6207[bankId=]80009
+[INFO ] 2019-10-10 19:58:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：3203683984
+[INFO ] 2019-10-10 19:58:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 充值金额为（分）：3000
+[INFO ] 2019-10-10 19:58:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RechargeBalance
+[INFO ] 2019-10-10 19:58:25 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RechargeBalanceReq]={"balanceItemTypeId":"0","systemId":"1","rechargeSource":"10003","rechargeAmount":3000,"destinationIdType":"3","rechargeUnit":"0","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80009","staffId":"10000078","operTime":"20190808062426"},"svcObjectStruct":{"objValue":"3203683984","objAttr":"1","objType":"1","dataArea":"1"},"flowId":"64620720    "}
+[INFO ] 2019-10-10 19:59:41 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctBalanceId":2000002057,"acctId":3203683984,"balanceTypeId":0,"balanceTypeName":"默认","effDate":"19900101000000","expDate":"20390101000000","paymentId":5000002236,"resultCode":"0","resultMsg":"SUCCESS","retBalance":3000,"unitTypeId":0}
+[INFO ] 2019-10-10 19:59:44 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[J10432M001          49        1200  3769036028  #]
+[INFO ] 2019-10-10 20:02:37 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：J10432M001          88        1601002200304633203683984     64620720           30.00201908080621350#
+[INFO ] 2019-10-10 20:02:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 20:02:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JL09
+[INFO ] 2019-10-10 20:02:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80009
+[INFO ] 2019-10-10 20:02:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000078
+[INFO ] 2019-10-10 20:02:38 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：3203683984
+[INFO ] 2019-10-10 20:02:41 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 20:02:41 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"64620720","destinationAttr":"2","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80009","staffId":"10000078","operTime":"20190808062135"},"destinationAccount":"13384327199"}
+[INFO ] 2019-10-10 20:02:55 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002237}
+[INFO ] 2019-10-10 20:02:56 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[J10432M001          49        1600  3769036028  #]
+[INFO ] 2019-10-10 20:12:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 20:12:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 20:12:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 20:12:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 20:12:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 20:12:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 20:12:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 20:12:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 20:12:11 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 20:12:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 20:13:24 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 20:13:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 20:13:29 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 20:13:30 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 20:13:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 20:16:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 20:16:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 20:16:44 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为：T104310000          88        160100220030463313017230922   000000059330       10.00201909051908170#
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000068
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：313017230922
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额充值]http://136.160.161.100:8083/billing/acct/RollRechargeBalance
+[INFO ] 2019-10-10 20:17:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
+[INFO ] 2019-10-10 20:17:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为{}: "}
+[INFO ] 2019-10-10 20:17:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]

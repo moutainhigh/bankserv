@@ -391,7 +391,7 @@ public class BankServiceImpl implements IBankService {
                 HashMap<String, Object> operAttrStructMap = new HashMap<String, Object>();//操作人属性
                 operAttrStructMap.put("staffId", staffId);
                 operAttrStructMap.put("operOrgId", bankId);
-                operAttrStructMap.put("operTime", content.substring(51));
+                operAttrStructMap.put("operTime", content.substring(51,65));
                 operAttrStructMap.put("operPost", 0);
                 operAttrStructMap.put("operServiceId", "1");
                 operAttrStructMap.put("lanId", 0);
@@ -407,9 +407,7 @@ public class BankServiceImpl implements IBankService {
 
                 if("379".equals(prod_id)) {
                     destinationAttr = "2";
-                }
-
-                if("280000002".equals(prod_id)) {
+                }else if("280000002".equals(prod_id)||"900037".equals(prod_id)) {
                     destinationAttr = "3";
                 }
 

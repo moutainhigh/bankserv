@@ -1130,3 +1130,6 @@
 [INFO ] 2019-10-09 20:28:19 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000220033875","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80006","staffId":"10000006","operTime":"20190809145940"},"destinationAccount":"043111178405"}
 [INFO ] 2019-10-09 20:29:35 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"reqServiceId":"100220030463","resultCode":"0","resultMsg":"SUCCESS","reversePaymentId":5000002200}
 [INFO ] 2019-10-09 20:30:12 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[060431JLBM111111111149        1600  3769036028  #]
+[INFO ] 2019-10-09 22:06:38 [Thread-38] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-09 22:06:38 [Thread-38] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-09 22:06:38 [Thread-38] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
