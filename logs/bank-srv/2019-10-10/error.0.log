@@ -388,3 +388,8 @@ java.lang.NullPointerException: null
 [ERROR] 2019-10-10 20:13:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
 [ERROR] 2019-10-10 20:16:44 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
 [ERROR] 2019-10-10 20:17:06 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-10 20:31:57 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-10 20:41:01 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-10 20:44:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-10 20:46:48 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！
+[ERROR] 2019-10-10 20:50:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务[http://136.160.161.100:8083/billing/acct/RollRechargeBalance]失败！

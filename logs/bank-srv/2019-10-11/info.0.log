@@ -1,0 +1,187 @@
+[INFO ] 2019-10-11 09:40:31 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 2316 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-11 09:40:31 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-11 09:40:32 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-11 09:40:32 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-11 09:40:38 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-11 09:40:38 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 280ms. Found 0 repository interfaces.
+[INFO ] 2019-10-11 09:40:40 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$76b17f15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-11 09:40:42 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-11 09:40:43 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-11 09:40:44 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-11 09:40:44 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 12016 ms
+[INFO ] 2019-10-11 09:40:49 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-11 09:40:50 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-11 09:40:50 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-11 09:40:52 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-11 09:40:53 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-11 09:40:53 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-11 09:40:56 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-11 09:40:58 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-11 09:40:58 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-11 09:40:58 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-11 09:40:58 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 32.258 seconds (JVM running for 42.665)
+[INFO ] 2019-10-11 09:43:00 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[C40434              74        110CDMA  17704342929         20190809010535#]
+[INFO ] 2019-10-11 09:43:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 09:43:07 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"17704342929","queryType":"2"}}
+[INFO ] 2019-10-11 09:43:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"379","servId":"343043450242","custName":"卢亭默","stateDate":"20190809082503","groupUser":"1","destinationAttr":"2","productName":"CDMA","homeAreaCode":"0434"}]}}
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：卢亭默
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JS03
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80003
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000062
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：17704342929
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=2
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 09:43:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80003","staffId":"10000062","operTime":"20190809010535"},"svcObjectStruct":{"objValue":"17704342929","objAttr":"2","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 09:44:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"卢亭默","balanceQuery":[{"acctBalanceId":1585881051,"acctId":343016311850,"available":1299,"balance":1299,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"普通预存款","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":1299,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-11 09:44:13 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[1100  1343016311850   卢亭默                                                         -12.99      #]
+[INFO ] 2019-10-11 09:45:30 [Thread-73] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-11 09:45:30 [Thread-73] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-11 09:45:30 [Thread-73] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-11 09:45:52 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 6712 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-11 09:45:52 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-11 09:45:52 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-11 09:45:52 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-11 09:45:54 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-11 09:45:54 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117ms. Found 0 repository interfaces.
+[INFO ] 2019-10-11 09:45:55 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85a7e5f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-11 09:45:56 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-11 09:45:57 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-11 09:45:57 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-11 09:45:57 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5260 ms
+[INFO ] 2019-10-11 09:45:59 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-11 09:46:00 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-11 09:46:00 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-11 09:46:00 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-11 09:46:00 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-11 09:46:01 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-11 09:46:02 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-11 09:46:03 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-11 09:46:03 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-11 09:46:03 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-11 09:46:03 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 13.009 seconds (JVM running for 16.729)
+[INFO ] 2019-10-11 09:46:20 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[GD0431    000000    74        110CDMA  18943097088         20190803101858#]
+[INFO ] 2019-10-11 09:46:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 09:46:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"18943097088","queryType":"2"}}
+[INFO ] 2019-10-11 09:46:26 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"379","servId":"313053202903","custName":"赵红伟","stateDate":"20190621021905","groupUser":"1","destinationAttr":"2","productName":"CDMA","homeAreaCode":"0431"}]}}
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：赵红伟
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GD11
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80011
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000086
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：18943097088
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=2
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 09:46:40 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80011","staffId":"10000086","operTime":"20190803101858"},"svcObjectStruct":{"objValue":"18943097088","objAttr":"2","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 09:46:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"赵红伟","balanceQuery":[{"acctBalanceId":1629465589,"acctId":313014553880,"available":2000,"balance":2000,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"活动预付款(通用)","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0},{"acctBalanceId":1542513896,"acctId":313014553880,"available":14419,"balance":14419,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"普通预存款","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":16419,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-11 09:46:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[GD0431    000000    125       1100  1313014553880   赵红伟                                                         -164.19     #]
+[INFO ] 2019-10-11 09:46:53 [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-10-11 09:46:53 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-10-11 09:46:53 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 80 ms
+[INFO ] 2019-10-11 09:49:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[G204320010          74        110CDMA  18943520507         20191002002122#]
+[INFO ] 2019-10-11 09:49:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 09:49:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"18943520507","queryType":"2"}}
+[INFO ] 2019-10-11 09:49:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"379","servId":"5001082162","custName":"辛欣","stateDate":"20190803185656","groupUser":"1","destinationAttr":"2","productName":"CDMA","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：辛欣
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=GS05
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80005
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000051
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：18943520507
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=2
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 09:49:53 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80005","staffId":"10000051","operTime":"20191002002122"},"svcObjectStruct":{"objValue":"18943520507","objAttr":"2","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 09:50:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"辛欣","balanceQuery":[{"acctBalanceId":1453297593,"acctId":5001028069,"available":2783,"balance":2783,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"普通预存款","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":2783,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-11 09:50:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[G204320010          125       1100  15001028069     辛欣                                                          -27.83      #]
+[INFO ] 2019-10-11 09:50:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[T204320001          74        110LOCAL 043210750303        20190909061828#]
+[INFO ] 2019-10-11 09:50:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 09:50:43 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"043210750303","queryType":"2"}}
+[INFO ] 2019-10-11 09:50:44 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"280000002","servId":"323030913680","custName":"汤国师","stateDate":"20190822061332","groupUser":"1","destinationAttr":"3","productName":"带宽","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：汤国师
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000069
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：043210750303
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=3
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 09:51:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000069","operTime":"20190909061828"},"svcObjectStruct":{"objValue":"043210750303","objAttr":"3","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 09:51:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"汤国师","balanceQuery":[{"acctBalanceId":1464677012,"acctId":323007580059,"available":3177,"balance":3177,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"普通预存款","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":3177,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-11 09:51:23 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T204320001          125       1100  1323007580059   汤国师                                                         -31.77      #]
+[INFO ] 2019-10-11 09:51:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[T204320001          74        110LOCAL 043210750303        20190909061828#]
+[INFO ] 2019-10-11 09:51:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 09:51:34 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"043210750303","queryType":"2"}}
+[INFO ] 2019-10-11 09:51:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"280000002","servId":"323030913680","custName":"汤国师","stateDate":"20190822061332","groupUser":"1","destinationAttr":"3","productName":"带宽","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：汤国师
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000069
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：043210750303
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=3
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 09:51:51 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000069","operTime":"20190909061828"},"svcObjectStruct":{"objValue":"043210750303","objAttr":"3","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 09:52:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"汤国师","balanceQuery":[{"acctBalanceId":1464677012,"acctId":323007580059,"available":3177,"balance":3177,"balanceTypeFlag":"0","cycleUpper":-1,"desc":"普通预存款","effDate":"19000101000000","expDate":"30000101000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":3177,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-11 09:52:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T204320001          125       1100  1323007580059   汤国师                                                         -31.77      #]
+[INFO ] 2019-10-11 10:00:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[T204320001          74        110LOCAL 043210750303        20190909061828#]
+[INFO ] 2019-10-11 10:00:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 10:00:03 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"043210750303","queryType":"2"}}
+[INFO ] 2019-10-11 10:00:04 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"280000002","servId":"323030913680","custName":"汤国师","stateDate":"20190822061332","groupUser":"1","destinationAttr":"3","productName":"带宽","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：汤国师
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000069
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：043210750303
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=3
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 10:01:08 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000069","operTime":"20190909061828"},"svcObjectStruct":{"objValue":"043210750303","objAttr":"3","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 10:01:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"汤国师","resultCode":"9994106018","resultMsg":"9994106018:ABM接口queryAcctItem报错!"}
+[INFO ] 2019-10-11 10:01:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T204320001          125       11010005#]
+[INFO ] 2019-10-11 10:07:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[T204320001          74        110LOCAL 043210750303        20190909061828#]
+[INFO ] 2019-10-11 10:07:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 10:07:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"043210750303","queryType":"2"}}
+[INFO ] 2019-10-11 10:07:49 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"280000002","servId":"323030913680","custName":"汤国师","stateDate":"20190822061332","groupUser":"1","destinationAttr":"3","productName":"带宽","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：汤国师
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000069
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：043210750303
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=3
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 10:07:58 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000069","operTime":"20190909061828"},"svcObjectStruct":{"objValue":"043210750303","objAttr":"3","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 10:08:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"汤国师","resultCode":"9994106018","resultMsg":"9994106018:ABM接口queryAcctItem报错!"}
+[INFO ] 2019-10-11 10:08:05 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T204320001          125       11010005#]
+[INFO ] 2019-10-11 10:08:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[T204320001          74        110LOCAL 043210750303        20190909061828#]
+[INFO ] 2019-10-11 10:08:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-11 10:08:31 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"043210750303","queryType":"2"}}
+[INFO ] 2019-10-11 10:08:33 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"280000002","servId":"323030913680","custName":"汤国师","stateDate":"20190822061332","groupUser":"1","destinationAttr":"3","productName":"带宽","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：汤国师
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=JT04
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80004
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000069
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：043210750303
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=3
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-11 10:08:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000069","operTime":"20190909061828"},"svcObjectStruct":{"objValue":"043210750303","objAttr":"3","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-11 10:09:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"汤国师","resultCode":"9994106018","resultMsg":"9994106018:ABM接口queryAcctItem报错!"}
+[INFO ] 2019-10-11 10:09:46 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T204320001          125       11010005#]
+[INFO ] 2019-10-11 10:59:51 [Thread-33] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-11 10:59:51 [Thread-33] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-11 10:59:51 [Thread-33] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

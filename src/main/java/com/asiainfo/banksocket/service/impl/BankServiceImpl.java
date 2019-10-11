@@ -153,6 +153,7 @@ public class BankServiceImpl implements IBankService {
                 if (balanceResult.getCode() == HttpStatus.SC_OK) {
                     object.clear();
                     object.putAll(balanceResult.getHeaders());
+                    result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
                     result += "1100  1";//交易码 +正确返回标识
                     QueryBalanceRes queryBalance= JSON.parseObject(balanceResult.getData(), QueryBalanceRes.class) ;
                     List<BalanceQuery> balanceQuery=queryBalance.getBalanceQuery();
@@ -428,7 +429,7 @@ public class BankServiceImpl implements IBankService {
                 bankHttpUrl = (BankHttpUrl) ac.getBean("BankHttpUrl");*/
                 Map<String, String> object = new HashMap<String, String>();
                 object.put("appID", "1111111");
-                LogUtil.info("[开始调用远程服务 余额充值]"+ bankHttpUrl.getRollRechargeBalanceUrl(),null, this.getClass());
+                LogUtil.info("[开始调用远程服务 余额回退]"+ bankHttpUrl.getRollRechargeBalanceUrl(),null, this.getClass());
                 LogUtil.info("输入参数[RollRechargeBalanceReq]="+query,null, this.getClass());
                 HttpResult RollRechargeResult=null;
                 try {
