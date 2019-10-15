@@ -79,6 +79,10 @@ public class BankServerHandler extends ChannelInboundHandlerAdapter{
                     //交易码160，反销（余额充值回退[非充值卡]）
                         result=bankServerHandler.bankService.rollRechargeBalance(head,request);
                     break;
+                /*case "170":
+                    //交易码170，余额查詢（余额充值回退[非充值卡]）
+                    result=bankServerHandler.bankService.getUnitedBalance(head,request);
+                    break;*/
                 default:
                     break;
             }

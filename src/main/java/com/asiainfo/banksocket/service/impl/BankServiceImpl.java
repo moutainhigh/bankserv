@@ -19,6 +19,9 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.asiainfo.banksocket.common.GetUnitedBalanceReq.StdCcrQueryBalanceBalance;
+import com.asiainfo.banksocket.common.GetUnitedBalanceReq.StdCcrQueryBalanceBalance.BalanceQueryInformation;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -480,6 +483,112 @@ public class BankServiceImpl implements IBankService {
         }
 
         LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+        return returnResult;
+    }
+
+    /**
+     *
+     *
+     * */
+    public String getUnitedBalance(String  packetHead, String request) throws IOException {
+        String returnResult="";
+        try{
+                LogUtil.info("socket接收的串为["+request+"]",null, this.getClass());
+                String content = request.substring(33, request.length() - 1);//内容
+                String phoneNum=content.substring(6, 26);
+                phoneNum=phoneNum.replace(" ","");
+                StdCcrQueryServRes accountInfo = searchAcctInfo(phoneNum);//查询用户信息
+                StdCcaQueryServResBean stdCcaQueryServResBean=accountInfo.getStdCcaQueryServRes();
+                if(stdCcaQueryServResBean==null){//用户信息不存在
+                    LogUtil.error("用户信息不存在", null, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getUserInfoNoData()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                }
+                List<StdCcaQueryServListBean> StdCcaQueryServListBean=stdCcaQueryServResBean.getStdCcaQueryServList();
+                String custName = StdCcaQueryServListBean.get(0).getCustName();
+                String destinationAttr=StdCcaQueryServListBean.get(0).getDestinationAttr();
+                LogUtil.info("用户名称为："+custName,null, this.getClass());
+                GetUnitedBalanceReq getUnitedBalanceReq=new GetUnitedBalanceReq();
+                StdCcrQueryBalanceBalance stdCcrQueryBalanceBalance=new StdCcrQueryBalanceBalance();
+                BalanceQueryInformation balanceQueryInformation= new BalanceQueryInformation();
+                balanceQueryInformation.setAreaCode("0431");
+                balanceQueryInformation.setDestinationAttr(destinationAttr);
+                balanceQueryInformation.setDestinationId(phoneNum);
+                balanceQueryInformation.setDestinationIdType("1");
+                balanceQueryInformation.setQueryFlag("1");
+                balanceQueryInformation.setQueryItemType("0");
+                stdCcrQueryBalanceBalance.setBalanceQueryInformation(balanceQueryInformation);
+                getUnitedBalanceReq.setStdCcrQueryBalanceBalance(stdCcrQueryBalanceBalance);
+
+                Map<String,String> object=new HashMap<String, String>();
+                object.put("appID","1111111");
+                LogUtil.info("[开始调用远程服务 余额查询]"+ bankHttpUrl.getGetUnitedBalance(),null, this.getClass());
+                LogUtil.info("输入参数[getUnitedBalanceReq]="+getUnitedBalanceReq.toString(),null, this.getClass());
+                HttpResult unitedBalanceResult=null;
+                try {
+                    unitedBalanceResult = HttpUtil.doPostJson(bankHttpUrl.getGetUnitedBalance(), getUnitedBalanceReq.toString(), object);
+                    LogUtil.info("调用远程服务返回的报文："+unitedBalanceResult.getData().toString(),null, this.getClass());
+                } catch (ClientProtocolException e) {
+                    LogUtil.error("连接错误", e, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getConnectError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                } catch (IOException e) {
+                    LogUtil.error("IO流错误", e, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getIoConnectError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                }
+                LogUtil.info("调用远程服务返回的报文："+unitedBalanceResult.getData().toString(),null, this.getClass());
+                System.out.println(unitedBalanceResult.getCode());
+                if (unitedBalanceResult.getCode() == HttpStatus.SC_OK) {
+                    object.clear();
+                    object.putAll(unitedBalanceResult.getHeaders());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "1100  1";//交易码 +正确返回标识
+                    GetUnitedBalanceRes queryBalance= JSON.parseObject(unitedBalanceResult.getData(), GetUnitedBalanceRes.class) ;
+                    /*List<BalanceQuery> balanceQuery=queryBalance.getBalanceQuery();
+                    BalanceQuery queryMap=balanceQuery.get(0);
+                    Long acctId=queryMap.getAcctId();
+                    returnResult += String.format("%1$-15s", acctId) + String.format("%1$-60s", custName);
+                    String s = "0";
+                    Integer realBalance=queryBalance.getRealBalance();
+                    String num="0";
+                    if (!realBalance.equals("null")) {
+                        if (realBalance != 0){
+                            DecimalFormat df = new DecimalFormat("0.00");
+                            num = df.format((float) realBalance / 100.0);
+                            if (num.indexOf("-") > -1) {
+                                num = num.replace("-", "");
+                            } else {
+                                num = "-" + num;
+                            }
+                        }else{
+                            num="0.00";
+                        }
+                    }
+                    returnResult += String.format("%1$-12s", num) + "#";//金额*/
+                } else {
+                    LogUtil.error("远程服务["+bankHttpUrl.getGetUnitedBalance()+"]服务调用失败", null, this.getClass());
+                    returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                    returnResult += "110"+errorCode.getQuerybalanceRemoteServiceError()+"#";
+                    LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+                    return returnResult;
+                }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            LogUtil.error("调用rollRechargeBalance服务失败！",e,this.getClass());
+            returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "49");//包头+包长度
+            returnResult += "160"+errorCode.getServiceError()+"#";
+            LogUtil.info("返回的串为["+returnResult+"]",null, this.getClass());
+            return returnResult;
+        }
+
+
         return returnResult;
     }
 

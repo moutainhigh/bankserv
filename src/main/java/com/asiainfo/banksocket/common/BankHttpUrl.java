@@ -19,6 +19,8 @@ public class BankHttpUrl {
     public String rollRechargeBalanceUrl;
     @Value("${openApi.bon3.searchServInfo}")
     public String searchServInfo;
+    @Value("${openApi.bon3.getUnitedBalance}")
+    public String getUnitedBalance;
 
     public String getQueryBalanceUrl() {
         return queryBalanceUrl;
@@ -50,5 +52,13 @@ public class BankHttpUrl {
 
     public void setSearchServInfo(String searchServInfo) {
         this.searchServInfo = searchServInfo;
+    }
+
+    public String getGetUnitedBalance() {
+        return getUnitedBalance;
+    }
+
+    public void setGetUnitedBalance(String getUnitedBalance) {
+        this.getUnitedBalance = getUnitedBalance;
     }
 }
