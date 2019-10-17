@@ -26,6 +26,7 @@ import com.asiainfo.banksocket.common.GetUnitedBalanceRes.StdCcaQueryBalanceBala
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -696,10 +697,12 @@ public class BankServiceImpl implements IBankService {
         String result="";
         // 解析books.xml文件
         // 创建SAXReader的对象reader
-        SAXReader reader = new SAXReader();
+        //SAXReader reader = new SAXReader();
+        InputStream is=this.getClass().getResourceAsStream(url);
         try {
             // 通过reader对象的read方法加载xml文件,获取docuemnt对象。
-            Document document = reader.read(new File(url));
+            //Document document = reader.read(new File(url));
+            Document document = new SAXReader().read(is);
             // 通过document对象获取根节点bookstore
             Element bookStore = document.getRootElement();
             // 通过element对象的elementIterator方法获取迭代器
@@ -738,10 +741,16 @@ public class BankServiceImpl implements IBankService {
         String bankHeadId=packetHead.substring(0,2);
         String areaId=packetHead.substring(2,6);
         File directory = new File("");//设定为当前文件夹
-        String xmlUrl=directory.getAbsolutePath()+"/src/main/resources/bankByHead.xml";
+        /*String xmlUrl=directory.getAbsolutePath()+"/src/main/resources/bankByHead.xml";
         String bankIdXml=directory.getAbsolutePath()+"/src/main/resources/bankId.xml";
-        String staffIdXml=directory.getAbsolutePath()+"/src/main/resources/staffId.xml";
-
+        String staffIdXml=directory.getAbsolutePath()+"/src/main/resources/staffId.xml";*/
+        //String path =  this.getClass().getResource("/init.properties").getPath();
+ /*       String xmlUrl=this.getClass().getResource("/bankByHead.xml").getPath();
+        String bankIdXml=this.getClass().getResource("/bankId.xml").getPath();
+        String staffIdXml=this.getClass().getResource("/staffId.xml").getPath();*/
+        String xmlUrl="/bankByHead.xml";
+        String bankIdXml="/bankId.xml";
+        String staffIdXml="/staffId.xml";
         if(bankHeadId.equals("06")){
             bankHeadId="YZ06";
         }else if(bankHeadId.equals("31")){

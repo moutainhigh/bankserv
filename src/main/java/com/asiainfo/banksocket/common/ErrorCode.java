@@ -13,7 +13,7 @@ public class ErrorCode {
     private static String RECHARGE_BALANCE_REMOTE_SERVICE_ERROR="10007";//余额缴费远程服务调用失败
     private static String RECHARGE_BALANCE_FLOWID_SECOND="10008";//余额缴费流水号重复失败
     private static String RECHARGE_BALANCE_FLOWID_ERROR="10009";//判断余额缴费流水号重复失败
-    private static String ROLL_RECHARGE_BALANCE_REMOTE_SERVICE_ERROR="10010";//余额缴费远程服务调用失败
+    private static String ROLL_RECHARGE_BALANCE_REMOTE_SERVICE_ERROR="10010";//余额缴费回退远程服务调用失败
 
     public static String getUserInfoNoData() {
         return USER_INFO_NO_DATA;

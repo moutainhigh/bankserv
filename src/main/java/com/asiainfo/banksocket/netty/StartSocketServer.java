@@ -50,7 +50,7 @@ public class StartSocketServer {
 
         //7.绑定ip和prot
         try {
-            ChannelFuture channelFuture=serverBootstarp.bind("136.160.161.81",8115);
+            ChannelFuture channelFuture=serverBootstarp.bind("127.0.0.1",12345);
             //监听关闭,等待服务关闭，关闭后应该释放资源
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
