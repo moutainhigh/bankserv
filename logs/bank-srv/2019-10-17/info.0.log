@@ -1,0 +1,134 @@
+[INFO ] 2019-10-17 10:01:32 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 2160 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-17 10:01:32 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-17 10:01:32 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-17 10:01:32 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-17 10:01:37 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-17 10:01:37 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 200ms. Found 0 repository interfaces.
+[INFO ] 2019-10-17 10:01:38 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef036a09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-17 10:01:41 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-17 10:01:42 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-17 10:01:43 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-17 10:01:43 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 10447 ms
+[INFO ] 2019-10-17 10:01:46 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-17 10:03:47 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-17 10:03:47 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-17 10:03:48 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-17 10:03:58 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 5184 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-17 10:03:58 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-17 10:03:58 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-17 10:03:58 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-17 10:04:00 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-17 10:04:00 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110ms. Found 0 repository interfaces.
+[INFO ] 2019-10-17 10:04:01 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa261853] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-17 10:04:02 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-17 10:04:03 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-17 10:04:03 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-17 10:04:03 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4637 ms
+[INFO ] 2019-10-17 10:04:05 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-17 10:04:06 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-17 10:04:06 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-17 10:04:06 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-17 10:04:07 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-17 10:04:08 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-17 10:04:11 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 10:04:13 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-17 10:04:13 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:04:13 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-17 10:04:13 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 16.754 seconds (JVM running for 18.848)
+[INFO ] 2019-10-17 10:07:05 [Thread-38] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 10:07:05 [Thread-38] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-17 10:07:05 [Thread-38] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-17 10:07:20 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 7700 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-17 10:07:20 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-17 10:07:20 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-17 10:07:20 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-17 10:07:22 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-17 10:07:22 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111ms. Found 0 repository interfaces.
+[INFO ] 2019-10-17 10:07:23 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99af6e28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-17 10:07:24 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-17 10:07:25 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-17 10:07:25 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-17 10:07:25 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4571 ms
+[INFO ] 2019-10-17 10:07:27 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-17 10:07:27 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-17 10:07:27 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-17 10:07:27 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-17 10:07:28 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-17 10:07:28 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-17 10:07:29 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 10:07:29 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-17 10:07:29 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:07:29 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-17 10:07:29 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 11.181 seconds (JVM running for 13.72)
+[INFO ] 2019-10-17 10:09:29 [Thread-30] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 10:09:29 [Thread-30] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-17 10:09:29 [Thread-30] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 2019-10-17 10:09:44 [restartedMain] c.a.banksocket.BanksocketApplication - Starting BanksocketApplication on 6M5UZCFODPEDIJ3 with PID 5688 (started by Administrator in C:\Users\Administrator\Desktop\吉林项目\银行接口\banksocket_jl\banksocket)
+[INFO ] 2019-10-17 10:09:44 [restartedMain] c.a.banksocket.BanksocketApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2019-10-17 10:09:44 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2019-10-17 10:09:44 [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO ] 2019-10-17 10:09:46 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO ] 2019-10-17 10:09:46 [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102ms. Found 0 repository interfaces.
+[INFO ] 2019-10-17 10:09:47 [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d26b2449] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.c.core.AprLifecycleListener - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[INFO ] 2019-10-17 10:09:48 [restartedMain] o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO ] 2019-10-17 10:09:49 [restartedMain] o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[INFO ] 2019-10-17 10:09:49 [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-10-17 10:09:49 [restartedMain] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4874 ms
+[INFO ] 2019-10-17 10:09:51 [restartedMain] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 2019-10-17 10:09:51 [restartedMain] org.hibernate.Version - HHH000412: Hibernate Core {5.3.9.Final}
+[INFO ] 2019-10-17 10:09:51 [restartedMain] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 2019-10-17 10:09:51 [restartedMain] o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[INFO ] 2019-10-17 10:09:52 [restartedMain] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2019-10-17 10:09:52 [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2019-10-17 10:09:53 [restartedMain] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 10:09:54 [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[INFO ] 2019-10-17 10:09:54 [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2019-10-17 10:09:54 [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2019-10-17 10:09:54 [restartedMain] c.a.banksocket.BanksocketApplication - Started BanksocketApplication in 11.537 seconds (JVM running for 13.636)
+[INFO ] 2019-10-17 10:11:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - socket接收的串为[060432JLBM111111111174        110CDMA  18043427637         20190809063854#]
+[INFO ] 2019-10-17 10:11:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 用户查询]http://136.160.161.100:8091/billing/acct/std/searchServInfo
+[INFO ] 2019-10-17 10:11:09 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[StdCcrQueryServReq]={"stdCcrQueryServ":{"areaCode":"0431","valueType":"1","value":"18043427637","queryType":"2"}}
+[INFO ] 2019-10-17 10:11:11 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryServRes":{"stdCcaQueryServList":[{"servState":"0","paymentFlag":"1","productId":"379","servId":"323056641574","custName":"彭桂云","stateDate":"20190808181501","groupUser":"1","destinationAttr":"2","productName":"CDMA","homeAreaCode":"0432"}]}}
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 用户名称为：彭桂云
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取staffId、bankHead、bankId···
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankHead]=YZ06
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[bankId]=80006
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 获取到的值为[staffId]=10000007
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 号码为：18043427637
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - destinationAttr=2
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8083/billing/acct/QueryBalance;
+[INFO ] 2019-10-17 10:11:22 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[QueryBalanceReq]={"queryFlag":"1","queryItemType":"0","systemId":"1","operAttrStruct":{"operServiceId":0,"lanId":0,"operPost":0,"operOrgId":"80006","staffId":"10000007","operTime":"20190809063854"},"svcObjectStruct":{"objValue":"18043427637","objAttr":"2","objType":"3","dataArea":""},"areacode":""}
+[INFO ] 2019-10-17 10:11:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"acctName":"彭桂云","balanceQuery":[{"acctBalanceId":1626932419,"acctId":323020803952,"available":2000,"balance":2000,"balanceTypeFlag":"0","cycleUpper":-1,"effDate":"19000101000000","expDate":"30001231000000","prodInstId":-1,"state":"1","used":0},{"acctBalanceId":1625962568,"acctId":323020803952,"available":2000,"balance":2000,"balanceTypeFlag":"0","cycleUpper":-1,"effDate":"19000101000000","expDate":"30001231000000","prodInstId":-1,"state":"1","used":0},{"acctBalanceId":1625778415,"acctId":323020803952,"available":3755,"balance":3755,"balanceTypeFlag":"0","cycleUpper":-1,"effDate":"19000101000000","expDate":"30001231000000","prodInstId":-1,"state":"1","used":0},{"acctBalanceId":1625776494,"acctId":323020803952,"available":22000,"balance":22000,"balanceTypeFlag":"0","cycleUpper":2000,"effDate":"19000101000000","expDate":"30001231000000","prodInstId":-1,"state":"1","used":0},{"acctBalanceId":1627049849,"acctId":323020803952,"available":24000,"balance":24000,"balanceTypeFlag":"0","cycleUpper":2000,"effDate":"19000101000000","expDate":"30001231000000","prodInstId":-1,"state":"1","used":0}],"paymentFlag":1,"queryFlag":"1","queryItemType":"0","realBalance":0,"resultCode":"0","resultMsg":"success"}
+[INFO ] 2019-10-17 10:11:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - [开始调用远程服务 余额查询]http://136.160.161.100:8091/billing/acct/std/getUnitedBalance
+[INFO ] 2019-10-17 10:11:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[getUnitedBalanceReq]={"stdCcrQueryBalanceBalance":{"balanceQueryInformation":{"areaCode":"0431","destinationAttr":"2","destinationId":"18043427637","destinationIdType":"1","queryFlag":"1","queryItemType":"0"}},"systemId":null}
+[INFO ] 2019-10-17 10:11:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryBalanceBalance":{"balanceInformation":[{"balanceAvailable":"0","balanceTypeFlag":"0"},{"balanceAvailable":"7755","balanceTypeFlag":"1"},{"balanceAvailable":"0","balanceTypeFlag":"2"},{"balanceAvailable":"0","balanceTypeFlag":"3"},{"balanceAvailable":"7755","balanceTypeFlag":"4"}],"paymentFlag":"1","totalBalanceAvailable":"7755"}}
+[INFO ] 2019-10-17 10:11:47 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 调用远程服务返回的报文：{"errorCode":"0","errorMsg":"SUCCESS","businessCode":null,"stdCcaQueryBalanceBalance":{"balanceInformation":[{"balanceAvailable":"0","balanceTypeFlag":"0"},{"balanceAvailable":"7755","balanceTypeFlag":"1"},{"balanceAvailable":"0","balanceTypeFlag":"2"},{"balanceAvailable":"0","balanceTypeFlag":"3"},{"balanceAvailable":"7755","balanceTypeFlag":"4"}],"paymentFlag":"1","totalBalanceAvailable":"7755"}}
+[INFO ] 2019-10-17 10:13:17 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[060432JLBM1111111111125       1100  1323020803952   彭桂云                                                         -77.55      #]

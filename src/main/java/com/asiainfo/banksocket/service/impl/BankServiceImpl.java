@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.asiainfo.banksocket.common.GetUnitedBalanceReq.StdCcrQueryBalanceBalance;
 import com.asiainfo.banksocket.common.GetUnitedBalanceReq.StdCcrQueryBalanceBalance.BalanceQueryInformation;
+import com.asiainfo.banksocket.common.GetUnitedBalanceRes.StdCcaQueryBalanceBalance;
 
 
 import java.io.File;
@@ -163,8 +164,70 @@ public class BankServiceImpl implements IBankService {
                     BalanceQuery queryMap=balanceQuery.get(0);
                     Long acctId=queryMap.getAcctId();
                     result += String.format("%1$-15s", acctId) + String.format("%1$-60s", custName);
-                    String s = "0";
-                    Integer realBalance=queryBalance.getRealBalance();
+                   //String s = "0";
+                    GetUnitedBalanceReq getUnitedBalanceReq=new GetUnitedBalanceReq();
+                    StdCcrQueryBalanceBalance stdCcrQueryBalanceBalance=new StdCcrQueryBalanceBalance();
+                    BalanceQueryInformation balanceQueryInformation= new BalanceQueryInformation();
+                    balanceQueryInformation.setAreaCode("0431");
+                    balanceQueryInformation.setDestinationAttr(destinationAttr);
+                    balanceQueryInformation.setDestinationId(phoneNum);
+                    balanceQueryInformation.setDestinationIdType("1");
+                    balanceQueryInformation.setQueryFlag("1");
+                    balanceQueryInformation.setQueryItemType("0");
+                    stdCcrQueryBalanceBalance.setBalanceQueryInformation(balanceQueryInformation);
+                    getUnitedBalanceReq.setStdCcrQueryBalanceBalance(stdCcrQueryBalanceBalance);
+
+                    LogUtil.info("[开始调用远程服务 余额查询]"+ bankHttpUrl.getGetUnitedBalance(),null, this.getClass());
+                    LogUtil.info("输入参数[getUnitedBalanceReq]="+getUnitedBalanceReq.toString(),null, this.getClass());
+                    HttpResult unitedBalanceResult=null;
+                    try {
+                        unitedBalanceResult = HttpUtil.doPostJson(bankHttpUrl.getGetUnitedBalance(), getUnitedBalanceReq.toString(), object);
+                        LogUtil.info("调用远程服务返回的报文："+unitedBalanceResult.getData().toString(),null, this.getClass());
+                    } catch (ClientProtocolException e) {
+                        LogUtil.error("连接错误", e, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "110"+errorCode.getConnectError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    } catch (IOException e) {
+                        LogUtil.error("IO流错误", e, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "110"+errorCode.getIoConnectError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    }
+                    LogUtil.info("调用远程服务返回的报文："+unitedBalanceResult.getData().toString(),null, this.getClass());
+                    System.out.println(unitedBalanceResult.getCode());
+                    if (unitedBalanceResult.getCode() == HttpStatus.SC_OK) {
+                        object.clear();
+                        object.putAll(unitedBalanceResult.getHeaders());
+                        GetUnitedBalanceRes getUnitedBalanceRes = JSON.parseObject(unitedBalanceResult.getData(), GetUnitedBalanceRes.class);
+                        StdCcaQueryBalanceBalance stdCcaQueryBalanceBalance=getUnitedBalanceRes.getStdCcaQueryBalanceBalance();
+                        String totalBalanceAvailable=stdCcaQueryBalanceBalance.getTotalBalanceAvailable();
+                        String num="0";
+                        if (!totalBalanceAvailable.equals("null")) {
+                            float realBalance=Float.parseFloat(totalBalanceAvailable);
+                            if (realBalance != 0){
+                                DecimalFormat df = new DecimalFormat("0.00");
+                                num = df.format( realBalance / 100.0);
+                                if (num.indexOf("-") > -1) {
+                                    num = num.replace("-", "");
+                                } else {
+                                    num = "-" + num;
+                                }
+                            }else{
+                                num="0.00";
+                            }
+                        }
+                        result += String.format("%1$-12s", num) + "#";//金额
+                    }else{
+                        LogUtil.error("远程服务["+bankHttpUrl.getGetUnitedBalance()+"]服务调用失败", null, this.getClass());
+                        result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
+                        result += "110"+errorCode.getQuerybalanceRemoteServiceError()+"#";
+                        LogUtil.info("返回的串为["+result+"]",null, this.getClass());
+                        return result;
+                    }
+                   /* Integer realBalance=queryBalance.getRealBalance();
                     String num="0";
                     if (!realBalance.equals("null")) {
                         if (realBalance != 0){
@@ -179,7 +242,7 @@ public class BankServiceImpl implements IBankService {
                             num="0.00";
                         }
                     }
-                    result += String.format("%1$-12s", num) + "#";//金额
+                    result += String.format("%1$-12s", num) + "#";//金额*/
                 } else {
                     LogUtil.error("远程服务["+bankHttpUrl.getQueryBalanceUrl()+"]服务调用失败", null, this.getClass());
                     result = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
@@ -551,7 +614,7 @@ public class BankServiceImpl implements IBankService {
                     returnResult = packetHead.substring(0, 20) + String.format("%1$-10s", "125");//包头+包长度
                     returnResult += "1100  1";//交易码 +正确返回标识
                     GetUnitedBalanceRes queryBalance= JSON.parseObject(unitedBalanceResult.getData(), GetUnitedBalanceRes.class) ;
-                    /*List<BalanceQuery> balanceQuery=queryBalance.getBalanceQuery();
+                   /* List<BalanceQuery> balanceQuery=queryBalance.getBalanceQuery();
                     BalanceQuery queryMap=balanceQuery.get(0);
                     Long acctId=queryMap.getAcctId();
                     returnResult += String.format("%1$-15s", acctId) + String.format("%1$-60s", custName);
