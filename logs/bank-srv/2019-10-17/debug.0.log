@@ -26359,3 +26359,27 @@ Unconditional classes:
 [DEBUG] 2019-10-17 16:04:39 [nioEventLoopGroup-3-1] o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-2: Close connection
 [DEBUG] 2019-10-17 16:04:39 [nioEventLoopGroup-3-1] o.a.h.impl.execchain.MainClientExec - Connection discarded
 [DEBUG] 2019-10-17 16:04:39 [nioEventLoopGroup-3-1] o.a.h.i.c.PoolingHttpClientConnectionManager - Connection released: [id: 2][route: {}->http://136.160.161.100:8083][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+[DEBUG] 2019-10-17 21:58:19 [Thread-31] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@225d5274, started on Thu Oct 17 15:53:17 CST 2019
+[DEBUG] 2019-10-17 21:58:21 [Thread-31] o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+[DEBUG] 2019-10-17 21:58:26 [Thread-31] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[DEBUG] 2019-10-17 21:58:26 [Thread-31] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[DEBUG] 2019-10-17 21:58:26 [Thread-31] o.h.internal.SessionFactoryImpl - HHH000031: Closing
+[DEBUG] 2019-10-17 21:58:27 [Thread-31] o.h.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@ef41514] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5c705aef]
+[DEBUG] 2019-10-17 21:58:27 [Thread-31] o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[DEBUG] 2019-10-17 21:58:27 [Thread-31] o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[DEBUG] 2019-10-17 21:58:29 [Thread-31] druid.sql.Connection - {conn-10001} closed
+[DEBUG] 2019-10-17 21:58:29 [Thread-31] druid.sql.Connection - {conn-10002} closed
+[DEBUG] 2019-10-17 21:58:29 [Thread-31] druid.sql.Connection - {conn-10003} closed
+[DEBUG] 2019-10-17 21:58:29 [Thread-31] druid.sql.Connection - {conn-10004} closed
+[DEBUG] 2019-10-17 21:58:29 [Thread-31] druid.sql.Connection - {conn-10005} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10006} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10007} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10008} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10009} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10010} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10011} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10012} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10013} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10014} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10015} closed
+[DEBUG] 2019-10-17 21:58:30 [Thread-31] druid.sql.Connection - {conn-10016} closed

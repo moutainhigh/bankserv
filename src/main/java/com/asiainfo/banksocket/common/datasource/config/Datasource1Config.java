@@ -26,8 +26,8 @@ import java.util.Arrays;
 public class Datasource1Config {
     private Logger logger = Logger.getLogger(this.getClass());	//log4j日志
     // 精确到 master 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "com.asiainfo.banksocket.mapper";
-    static final String MAPPER_LOCATION = "classpath:mapper/*.xml";
+    static final String PACKAGE = "com.asiainfo.banksocket.mapper.mysqlmapper";
+    static final String MAPPER_LOCATION = "classpath:mapper/mysqlmapper/*.xml";
 
     @Value("${ds1.datasource.url}")
     private String url;

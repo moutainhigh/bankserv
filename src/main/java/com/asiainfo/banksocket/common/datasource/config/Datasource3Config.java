@@ -9,6 +9,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
@@ -22,15 +23,15 @@ import java.sql.SQLException;
  * @date 2019/8/69:11
  * @Version 1.0
  */
-@Deprecated
-//@Configuration
+//@Deprecated
+@Configuration
 //扫描 Mapper 接口并容器管理
 @MapperScan(basePackages = Datasource3Config.PACKAGE, sqlSessionFactoryRef = "ds3SqlSessionFactory")
 
 public class Datasource3Config {
     private Logger logger = Logger.getLogger(this.getClass());	//log4j日志
     // 精确到 master 目录，以便跟其他数据源隔离
-    static final String PACKAGE = "com.asia.mapper.orclmapper";
+    static final String PACKAGE = "com.asiainfo.banksocket.mapper.orclmapper";
     static final String MAPPER_LOCATION = "classpath:mapper/orclmapper/*.xml";
 
     @Value("${ds3.datasource.url}")

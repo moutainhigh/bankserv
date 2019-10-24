@@ -3,6 +3,8 @@ package com.asiainfo.banksocket.dao;
 
 import com.asiainfo.banksocket.common.BankChargeRecord;
 import com.asiainfo.banksocket.mapper.BankMapper;
+import com.asiainfo.banksocket.mapper.mysqlmapper.BankMysqlMapper;
+import com.asiainfo.banksocket.mapper.orclmapper.BankOrclMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -15,23 +17,31 @@ public class BankDao {
     @Autowired
     BankMapper bankMapper;
 
+    @Autowired
+    BankMysqlMapper bankMysqlMapper;
+
+    @Autowired
+    BankOrclMapper bankOrclMapper;
+
+
+
 
     public String queryProdInstId(String obj){
-        return bankMapper.queryProdInstId(obj);
+        return bankMysqlMapper.queryProdInstId(obj);
     }
     public HashMap<String,Object> queryProdInstInfo(String prodInstId, String objValue){
-        return bankMapper.queryProdInstInfo(prodInstId,objValue);
+        return bankMysqlMapper.queryProdInstInfo(prodInstId,objValue);
     }
 
     public String checkRowNum(String flowId,String areaId,String bankId){
-        return bankMapper.checkRowNum(flowId,areaId,bankId);
+        return bankOrclMapper.checkRowNum(flowId,areaId,bankId);
     }
 
     public void insertBankChargeRecord(BankChargeRecord bankChargeRecord){
-        bankMapper.insertBankChargeRecord(bankChargeRecord);
+        bankOrclMapper.insertBankChargeRecord(bankChargeRecord);
     }
 
     public void updateBankChargeRecord(BankChargeRecord bankChargeRecord){
-        bankMapper.updateBankChargeRecord(bankChargeRecord);
+        bankOrclMapper.updateBankChargeRecord(bankChargeRecord);
     }
 }

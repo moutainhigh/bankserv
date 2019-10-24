@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.asiainfo.banksocket.mapper.mysqlmapper.BankMysqlMapper">
+    <select id="queryProdInstId" resultType="java.lang.String">
+        select a.PROD_INST_ID from account a where a.ACCT_ID = #{obj} and a.ROUTE_ID = #{obj}
+    </select>
+    <select id="queryProdInstInfo" resultType="java.util.HashMap">
+        select a.ACC_NUM,a.PROD_ID from prod_inst a where a.PROD_INST_ID = #{prodInstId}
+        and a.ROUTE_ID = #{objValue}
+    </select>
+</mapper>

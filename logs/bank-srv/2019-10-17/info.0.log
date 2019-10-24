@@ -455,3 +455,5 @@
 [INFO ] 2019-10-17 16:04:36 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 输入参数[RollRechargeBalanceReq]={"reqServiceId":"100220030463","systemId":"1","srcServiceId":"000000059330","destinationAttr":"3","operAttrStruct":{"operServiceId":"1","lanId":0,"operPost":0,"operOrgId":"80004","staffId":"10000068","operTime":"20190905190817"},"destinationAccount":"043116199912074220"}
 [INFO ] 2019-10-17 16:04:39 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 远程服务返回的报文：{"resultCode":"14001051","resultMsg":"核心服务raccountTransactionStdService.billReverse调用失败, 错误信息为695160006/*用户号码与产品属性不匹配*/: "}
 [INFO ] 2019-10-17 16:04:50 [nioEventLoopGroup-3-1] c.a.b.service.impl.BankServiceImpl - 返回的串为[T104310000          49        16010010#]
+[INFO ] 2019-10-17 21:58:26 [Thread-31] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-10-17 21:58:26 [Thread-31] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
